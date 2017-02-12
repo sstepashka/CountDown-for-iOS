@@ -11,40 +11,6 @@ import UIKit
 
 private let minimumTimeForRedraw = 0.0097
 
-//class CountDownTimeLabel: UILabel {
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        
-//        adjustsFontSizeToFitWidth = true
-//        super.text = .none
-//    }
-//    
-//    @available(*, unavailable)
-//    override var text: String? {
-//        willSet {}
-//    }
-//    
-//    private var prevTimeInterval: TimeInterval? = .none
-//    
-//    var timeInterval: TimeInterval? = .none {
-//        didSet{
-//            if let timeInterval = timeInterval {
-//                if let prevTimeInterval = prevTimeInterval {
-//                    if abs(prevTimeInterval - timeInterval) < minimumTimeForRedraw {
-//                        return
-//                    }
-//                }
-//                
-//                prevTimeInterval = timeInterval
-//
-//                super.text = timeInterval .countDownString
-//            } else {
-//                super.text = .none
-//            }
-//        }
-//    }
-//}
-
 private let defaultFont = UIFont(name: "HelveticaNeue-Light", size: 400.0)
 private let defaultTextColor: UIColor = .white
 
@@ -52,24 +18,17 @@ private let defaultTextColor: UIColor = .white
 class CountDownTimeLabel: UIView {
     fileprivate var label: UILabel! {
         didSet {
+            guard let label = label else {
+                fatalError("'label' didn't loaded.")
+            }
+            
             self.addSubview(label)
             
-            var constraits: [NSLayoutConstraint] = []
+            let views = ["label": label]
             
-            constraits +=
-            NSLayoutConstraint.constraints(
-                withVisualFormat: "H:|-0-[label]-0-|",
-                options: [],
-                metrics: .none,
-                views: ["label": label]
-            )
-            
-            constraits += NSLayoutConstraint.constraints(
-                withVisualFormat: "V:|-0-[label]-0-|",
-                options: [],
-                metrics: .none,
-                views: ["label": label]
-            )
+            let constraits = [NSLayoutConstraint]
+                .constraints("H:|-0-[label]-0-|", views: views)
+                .constraints("V:|-0-[label]-0-|", views: views)
             
             constraits.activate()
         }
@@ -111,13 +70,13 @@ class CountDownTimeLabel: UIView {
     var timeInterval: TimeInterval? = .none {
         didSet{
             if let timeInterval = timeInterval {
-                if let prevTimeInterval = prevTimeInterval {
-                    if abs(prevTimeInterval - timeInterval) < minimumTimeForRedraw {
-                        return
-                    }
-                }
+//                if let prevTimeInterval = prevTimeInterval {
+//                    if abs(prevTimeInterval - timeInterval) < minimumTimeForRedraw {
+//                        return
+//                    }
+//                }
                 
-                prevTimeInterval = timeInterval
+//                prevTimeInterval = timeInterval
                 
                 label.text = timeInterval.countDownString
             } else {
