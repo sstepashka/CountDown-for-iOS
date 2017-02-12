@@ -9,12 +9,6 @@
 import Foundation
 import UIKit
 
-protocol NSLayoutConstraintCollection {
-//    static func constraints(withVisualFormat format: String, options opts: NSLayoutFormatOptions, metrics: [String : Any]?, views: [String : Any]) -> Self
-//    func constraints(withVisualFormat format: String, options opts: NSLayoutFormatOptions, metrics: [String : Any]?, views: [String : Any]) -> Self
-//    func activate()
-}
-
 extension Array where Element: NSLayoutConstraint {
     func activate() {
         NSLayoutConstraint.activate(self)

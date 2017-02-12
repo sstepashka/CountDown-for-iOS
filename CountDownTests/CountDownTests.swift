@@ -11,7 +11,7 @@ import XCTest
 
 extension XCTestCase {
     func expectFatalError(_ expectedMessage: String = "", body: @escaping () -> Void) {
-        let expectation = self.expectation(description: "Expecting 'FatalError'")
+        let expectation = self.expectation(description: "Expecting 'FatalError' with message: \"\(expectedMessage)\"")
         
         let storedFatalError = Assertions.fatalError
         
@@ -31,24 +31,7 @@ extension XCTestCase {
     }
 }
 
-class CADisplayLinkMock: CADisplayLink {
-    override init() {
-        
-    }
-}
-
 class CountDownTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
     func testTimeIntervalExtensions() {
         let timeInterval1: TimeInterval = 30.129
         
@@ -88,7 +71,7 @@ class CountDownTests: XCTestCase {
         XCTAssertEqual(stoppedState.started, false)
         
         let startTimeInterval: TimeInterval = 10.0
-        let displayLinkMock = CADisplayLinkMock()
+        let displayLinkMock = CADisplayLink()
         let startedState: CountDownState = .started(displayLinkMock, startTimeInterval)
         
         XCTAssertEqual(startedState.started, true)
@@ -110,7 +93,7 @@ class CountDownTests: XCTestCase {
     
     func testFatalErrors() {
         let startTimeInterval: TimeInterval = 0.0
-        let startedState: CountDownState = .started(CADisplayLinkMock(), startTimeInterval)
+        let startedState: CountDownState = .started(CADisplayLink(), startTimeInterval)
         
         expectFatalError("\'downTimeInterval\' can be only greather zero") {
             _ = startedState.elapsedTime(-10.0)
