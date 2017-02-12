@@ -139,9 +139,15 @@ class CountDownViewController: UIViewController {
             stop()
         }
     }
-    
+}
+
+extension CountDownViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .all
     }
 }
 
