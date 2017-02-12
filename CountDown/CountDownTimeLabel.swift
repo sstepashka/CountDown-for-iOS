@@ -96,9 +96,9 @@ class CountDownTimeLabel: UIView {
         label.textColor = defaultTextColor
         label.adjustsFontSizeToFitWidth = true
         label.text = .none
+        label.textAlignment = .center
         label.minimumScaleFactor = 0.01
         label.numberOfLines = 1
-        label.backgroundColor = .clear
         
         label.setContentCompressionResistancePriority(UILayoutPriorityDefaultHigh, for: .vertical)
         label.setContentCompressionResistancePriority(UILayoutPriorityDefaultHigh, for: .horizontal)
@@ -119,7 +119,7 @@ class CountDownTimeLabel: UIView {
                 
                 prevTimeInterval = timeInterval
                 
-                label.text = timeInterval .countDownString
+                label.text = timeInterval.countDownString
             } else {
                 label.text = .none
             }
