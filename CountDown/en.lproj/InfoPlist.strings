@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  CountDown
+
+  Created by Kuragin Dmitriy on 12/02/2017.
+  Copyright © 2017 Kuragin Dmitriy. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "Count Down";
