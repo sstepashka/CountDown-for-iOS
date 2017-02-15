@@ -43,15 +43,14 @@ extension CountDownState {
 
 private let defaultDownTimeInterval: TimeInterval = 30.0
 private let defaultRunLoop = RunLoop.main
-private let defaultVibrateValue = true
-private let defaultSystemSoundID: SystemSoundID = 1104
+private let defaultSystemSoundID: SystemSoundID = 1022 //1104
 
 class CountDownViewController: UIViewController {
     @IBOutlet var timeLabel: CountDownTimeLabel!
     
     private let runLoop = defaultRunLoop
     private let downTimeInterval = defaultDownTimeInterval
-    private let vibrate = defaultVibrateValue
+    private var vibrate = Sounds.settings.vibrate
     private let systemSoundID = defaultSystemSoundID
     private let application = UIApplication.shared
     
@@ -131,6 +130,12 @@ class CountDownViewController: UIViewController {
         }
         
         AudioServicesPlaySystemSound(systemSoundID)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        vibrate = Sounds.settings.vibrate
     }
     
     override func viewWillDisappear(_ animated: Bool) {

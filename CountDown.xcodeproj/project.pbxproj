@@ -19,6 +19,13 @@
 		582FADD51E4FC8C5008DADF2 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582FADD41E4FC8C5008DADF2 /* TimeIntervalExtensions.swift */; };
 		582FADD71E4FD0BD008DADF2 /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582FADD61E4FD0BD008DADF2 /* Testing.swift */; };
 		582FADD91E4FDF32008DADF2 /* NSLayoutConstraintExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582FADD81E4FDF32008DADF2 /* NSLayoutConstraintExtensions.swift */; };
+		5857FBA81E51AC160093565B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5857FBA61E51AC160093565B /* SettingsViewController.swift */; };
+		5857FBA91E51AC160093565B /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5857FBA71E51AC160093565B /* Sounds.swift */; };
+		5857FBAB1E51AC310093565B /* VibrateSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5857FBAA1E51AC310093565B /* VibrateSettingsCell.swift */; };
+		5857FBB51E5221C70093565B /* PocketSphinx.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FBB31E5221C70093565B /* PocketSphinx.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5857FBB81E5221C70093565B /* PocketSphinx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5857FBB11E5221C70093565B /* PocketSphinx.framework */; };
+		5857FBB91E5221C70093565B /* PocketSphinx.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5857FBB11E5221C70093565B /* PocketSphinx.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5857FD0B1E523AC40093565B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5857FD0A1E523AC40093565B /* File.swift */; };
 		589DB7BF1E4FF06C00418B4F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 589DB7C11E4FF06C00418B4F /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +37,28 @@
 			remoteGlobalIDString = 582FADA91E4F888D008DADF2;
 			remoteInfo = CountDown;
 		};
+		5857FBB61E5221C70093565B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 582FADA21E4F888D008DADF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5857FBB01E5221C70093565B;
+			remoteInfo = PocketSphinx;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5857FBBD1E5221C70093565B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5857FBB91E5221C70093565B /* PocketSphinx.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		582FADAA1E4F888D008DADF2 /* CountDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +77,13 @@
 		582FADD41E4FC8C5008DADF2 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		582FADD61E4FD0BD008DADF2 /* Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
 		582FADD81E4FDF32008DADF2 /* NSLayoutConstraintExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtensions.swift; sourceTree = "<group>"; };
+		5857FBA61E51AC160093565B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		5857FBA71E51AC160093565B /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
+		5857FBAA1E51AC310093565B /* VibrateSettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VibrateSettingsCell.swift; sourceTree = "<group>"; };
+		5857FBB11E5221C70093565B /* PocketSphinx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PocketSphinx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5857FBB31E5221C70093565B /* PocketSphinx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PocketSphinx.h; sourceTree = "<group>"; };
+		5857FBB41E5221C70093565B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5857FD0A1E523AC40093565B /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		589DB7C01E4FF06C00418B4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		589DB7C21E4FF0E200418B4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		589DB7C41E4FF12200418B4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -60,11 +95,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5857FBB81E5221C70093565B /* PocketSphinx.framework in Frameworks */,
 				582FADD11E4F9BA4008DADF2 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		582FADBB1E4F888D008DADF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5857FBAD1E5221C70093565B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,6 +122,7 @@
 			children = (
 				582FADAC1E4F888D008DADF2 /* CountDown */,
 				582FADC11E4F888D008DADF2 /* CountDownTests */,
+				5857FBB21E5221C70093565B /* PocketSphinx */,
 				582FADAB1E4F888D008DADF2 /* Products */,
 				582FADCF1E4F9BA4008DADF2 /* Frameworks */,
 			);
@@ -89,6 +133,7 @@
 			children = (
 				582FADAA1E4F888D008DADF2 /* CountDown.app */,
 				582FADBE1E4F888D008DADF2 /* CountDownTests.xctest */,
+				5857FBB11E5221C70093565B /* PocketSphinx.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +141,7 @@
 		582FADAC1E4F888D008DADF2 /* CountDown */ = {
 			isa = PBXGroup;
 			children = (
+				5857FBA51E51AC160093565B /* Settings */,
 				582FADAD1E4F888D008DADF2 /* AppDelegate.swift */,
 				582FADAF1E4F888D008DADF2 /* CountDownViewController.swift */,
 				582FADB11E4F888D008DADF2 /* Main.storyboard */,
@@ -129,7 +175,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5857FBA51E51AC160093565B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5857FBA61E51AC160093565B /* SettingsViewController.swift */,
+				5857FBA71E51AC160093565B /* Sounds.swift */,
+				5857FBAA1E51AC310093565B /* VibrateSettingsCell.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		5857FBB21E5221C70093565B /* PocketSphinx */ = {
+			isa = PBXGroup;
+			children = (
+				5857FBB31E5221C70093565B /* PocketSphinx.h */,
+				5857FBB41E5221C70093565B /* Info.plist */,
+				5857FD0A1E523AC40093565B /* File.swift */,
+			);
+			path = PocketSphinx;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5857FBAE1E5221C70093565B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5857FBB51E5221C70093565B /* PocketSphinx.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		582FADA91E4F888D008DADF2 /* CountDown */ = {
@@ -139,10 +216,12 @@
 				582FADA61E4F888D008DADF2 /* Sources */,
 				582FADA71E4F888D008DADF2 /* Frameworks */,
 				582FADA81E4F888D008DADF2 /* Resources */,
+				5857FBBD1E5221C70093565B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5857FBB71E5221C70093565B /* PBXTargetDependency */,
 			);
 			name = CountDown;
 			productName = CountDown;
@@ -167,6 +246,24 @@
 			productReference = 582FADBE1E4F888D008DADF2 /* CountDownTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		5857FBB01E5221C70093565B /* PocketSphinx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5857FBBA1E5221C70093565B /* Build configuration list for PBXNativeTarget "PocketSphinx" */;
+			buildPhases = (
+				5857FBAC1E5221C70093565B /* Sources */,
+				5857FBAD1E5221C70093565B /* Frameworks */,
+				5857FBAE1E5221C70093565B /* Headers */,
+				5857FBAF1E5221C70093565B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PocketSphinx;
+			productName = PocketSphinx;
+			productReference = 5857FBB11E5221C70093565B /* PocketSphinx.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -187,6 +284,12 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 582FADA91E4F888D008DADF2;
 					};
+					5857FBB01E5221C70093565B = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 44LEJK9728;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 582FADA51E4F888D008DADF2 /* Build configuration list for PBXProject "CountDown" */;
@@ -205,6 +308,7 @@
 			targets = (
 				582FADA91E4F888D008DADF2 /* CountDown */,
 				582FADBD1E4F888D008DADF2 /* CountDownTests */,
+				5857FBB01E5221C70093565B /* PocketSphinx */,
 			);
 		};
 /* End PBXProject section */
@@ -228,6 +332,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5857FBAF1E5221C70093565B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -235,13 +346,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5857FBAB1E51AC310093565B /* VibrateSettingsCell.swift in Sources */,
 				582FADD71E4FD0BD008DADF2 /* Testing.swift in Sources */,
 				582FADCE1E4F92E8008DADF2 /* CountDownTimeLabel.swift in Sources */,
 				582FADB01E4F888D008DADF2 /* CountDownViewController.swift in Sources */,
 				582FADD51E4FC8C5008DADF2 /* TimeIntervalExtensions.swift in Sources */,
 				582FADD31E4FA813008DADF2 /* BackgroundView.swift in Sources */,
 				582FADAE1E4F888D008DADF2 /* AppDelegate.swift in Sources */,
+				5857FBA91E51AC160093565B /* Sounds.swift in Sources */,
 				582FADD91E4FDF32008DADF2 /* NSLayoutConstraintExtensions.swift in Sources */,
+				5857FBA81E51AC160093565B /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +367,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5857FBAC1E5221C70093565B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5857FD0B1E523AC40093565B /* File.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -260,6 +382,11 @@
 			isa = PBXTargetDependency;
 			target = 582FADA91E4F888D008DADF2 /* CountDown */;
 			targetProxy = 582FADBF1E4F888D008DADF2 /* PBXContainerItemProxy */;
+		};
+		5857FBB71E5221C70093565B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5857FBB01E5221C70093565B /* PocketSphinx */;
+			targetProxy = 5857FBB61E5221C70093565B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -390,6 +517,7 @@
 		582FADC81E4F888D008DADF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 44LEJK9728;
 				INFOPLIST_FILE = CountDown/Info.plist;
@@ -404,6 +532,7 @@
 		582FADC91E4F888D008DADF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 44LEJK9728;
 				INFOPLIST_FILE = CountDown/Info.plist;
@@ -443,6 +572,71 @@
 			};
 			name = Release;
 		};
+		5857FBBB1E5221C70093565B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 44LEJK9728;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/PocketSphinx/pocketsphinx/include";
+				INFOPLIST_FILE = PocketSphinx/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/PocketSphinx/pocketsphinx/lib",
+				);
+				MODULEMAP_FILE = PocketSphinx/module.modulemap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.api.ai.PocketSphinx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/PocketSphinx/pocketsphinx/include";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5857FBBC1E5221C70093565B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 44LEJK9728;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/PocketSphinx/pocketsphinx/include";
+				INFOPLIST_FILE = PocketSphinx/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/PocketSphinx/pocketsphinx/lib",
+				);
+				MODULEMAP_FILE = PocketSphinx/module.modulemap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.api.ai.PocketSphinx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/PocketSphinx/pocketsphinx/include";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -472,6 +666,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		5857FBBA1E5221C70093565B /* Build configuration list for PBXNativeTarget "PocketSphinx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5857FBBB1E5221C70093565B /* Debug */,
+				5857FBBC1E5221C70093565B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

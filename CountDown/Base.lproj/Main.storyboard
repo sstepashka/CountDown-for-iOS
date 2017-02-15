@@ -38,15 +38,24 @@
                                         <rect key="frame" x="20" y="8" width="280" height="388"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQ4-gq-CAw">
+                                        <rect key="frame" x="245" y="8" width="67" height="34"/>
+                                        <state key="normal" title="Settings"/>
+                                        <connections>
+                                            <segue destination="MYL-MD-p9C" kind="show" id="GA3-5a-aZh"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="hQ4-gq-CAw" firstAttribute="top" secondItem="ma6-rt-0zM" secondAttribute="top" constant="8" id="2Rg-y0-HbI"/>
                                     <constraint firstItem="dOc-O4-qrc" firstAttribute="top" secondItem="ma6-rt-0zM" secondAttribute="top" constant="8" id="LWS-SG-IPb"/>
                                     <constraint firstItem="1k6-3O-O5s" firstAttribute="top" secondItem="dOc-O4-qrc" secondAttribute="bottom" constant="8" id="OI6-O7-YnO"/>
                                     <constraint firstAttribute="trailing" secondItem="dOc-O4-qrc" secondAttribute="trailing" constant="20" id="TPC-8U-LQm"/>
                                     <constraint firstItem="dOc-O4-qrc" firstAttribute="leading" secondItem="ma6-rt-0zM" secondAttribute="leading" constant="20" id="V2l-hq-Un6"/>
                                     <constraint firstItem="1k6-3O-O5s" firstAttribute="leading" secondItem="ma6-rt-0zM" secondAttribute="leading" constant="20" id="VB5-Wt-gbq"/>
                                     <constraint firstAttribute="bottom" secondItem="1k6-3O-O5s" secondAttribute="bottom" constant="8" id="YCY-g5-Wl9"/>
+                                    <constraint firstAttribute="trailing" secondItem="hQ4-gq-CAw" secondAttribute="trailing" constant="8" id="Yvd-8X-vRe"/>
                                     <constraint firstAttribute="trailing" secondItem="1k6-3O-O5s" secondAttribute="trailing" constant="20" id="kll-Xu-xgx"/>
                                 </constraints>
                             </view>
@@ -80,6 +89,64 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="58.920539730134934"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="K7k-G3-cRD">
+            <objects>
+                <tableViewController id="zfo-HU-XqX" customClass="SettingsViewController" customModule="CountDown" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="DZB-SB-Afv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Vibrate" id="bhI-nd-1Td">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fg1-yo-FXo" customClass="VibrateSettingsCell" customModule="CountDown" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="56" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fg1-yo-FXo" id="Ra2-Kh-gSb">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="zfo-HU-XqX" id="25U-AB-T85"/>
+                            <outlet property="delegate" destination="zfo-HU-XqX" id="375-fS-2Fc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="EDc-cf-RRw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="PcR-jQ-30R">
+                            <connections>
+                                <action selector="doneWithSender:" destination="zfo-HU-XqX" id="g79-HB-kSx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="vibrateCell" destination="fg1-yo-FXo" id="MW8-8h-F6d"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9bu-zr-TIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1714" y="52"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="39d-CU-bNm">
+            <objects>
+                <navigationController id="MYL-MD-p9C" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JLs-Gn-t6A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zfo-HU-XqX" kind="relationship" relationship="rootViewController" id="EEC-2B-kJi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4K1-zS-LLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703" y="52"/>
         </scene>
     </scenes>
 </document>
