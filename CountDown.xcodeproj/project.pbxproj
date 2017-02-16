@@ -30,7 +30,6 @@
 		5857FF6C1E558DF20093565B /* libsphinxbase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5857FF3E1E558DF20093565B /* libsphinxbase.a */; };
 		5857FF6F1E5590FB0093565B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5857FF6E1E5590FB0093565B /* File.swift */; };
 		5857FF711E5591AE0093565B /* PocketSphinx.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5857FBB31E5221C70093565B /* PocketSphinx.h */; };
-		5857FF721E5591B50093565B /* module.modulemap in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5857FF6D1E558EF00093565B /* module.modulemap */; };
 		589DB7BF1E4FF06C00418B4F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 589DB7C11E4FF06C00418B4F /* InfoPlist.strings */; };
 		58E56BEB1E55FB4E00A59E95 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E56BEA1E55FB4E00A59E95 /* OpenAL.framework */; };
 		58E56BEF1E55FC3500A59E95 /* swift.c in Sources */ = {isa = PBXBuildFile; fileRef = 58E56BED1E55FC3500A59E95 /* swift.c */; };
@@ -72,7 +71,6 @@
 			dstPath = include/MyLibrary;
 			dstSubfolderSpec = 7;
 			files = (
-				5857FF721E5591B50093565B /* module.modulemap in CopyFiles */,
 				5857FF711E5591AE0093565B /* PocketSphinx.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,7 +146,6 @@
 		5857FF3C1E558DF20093565B /* libpocketsphinx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpocketsphinx.a; sourceTree = "<group>"; };
 		5857FF3D1E558DF20093565B /* libsphinxad.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsphinxad.a; sourceTree = "<group>"; };
 		5857FF3E1E558DF20093565B /* libsphinxbase.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsphinxbase.a; sourceTree = "<group>"; };
-		5857FF6D1E558EF00093565B /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		5857FF6E1E5590FB0093565B /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		5857FF731E5592040093565B /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		589DB7C01E4FF06C00418B4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -263,7 +260,6 @@
 		5857FBB21E5221C70093565B /* PocketSphinx */ = {
 			isa = PBXGroup;
 			children = (
-				5857FF6D1E558EF00093565B /* module.modulemap */,
 				5857FF0B1E558DF20093565B /* pocketsphinx */,
 				5857FBB31E5221C70093565B /* PocketSphinx.h */,
 				5857FBB41E5221C70093565B /* Info.plist */,
@@ -769,7 +765,6 @@
 					"$(SRCROOT)/PocketSphinx/pocketsphinx/lib",
 					"$(PROJECT_DIR)/PocketSphinx/pocketsphinx/lib",
 				);
-				MODULEMAP_FILE = PocketSphinx/module.modulemap;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.api.ai.PocketSphinx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -804,7 +799,6 @@
 					"$(SRCROOT)/PocketSphinx/pocketsphinx/lib",
 					"$(PROJECT_DIR)/PocketSphinx/pocketsphinx/lib",
 				);
-				MODULEMAP_FILE = PocketSphinx/module.modulemap;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.api.ai.PocketSphinx;
 				PRODUCT_NAME = "$(TARGET_NAME)";

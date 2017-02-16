@@ -39,5 +39,6 @@ extension UserDefaults: SoundsSettingsType {
 }
 
 final class Sounds {
+    let condig = Config()
     static var settings: SoundsSettingsType = UserDefaults.standard
 }

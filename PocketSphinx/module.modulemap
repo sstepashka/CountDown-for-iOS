@@ -1,6 +1,0 @@
-framework module PocketSphinx {
-    umbrella header "PocketSphinx.h"
-    
-    export *
-    module * { export * }
-}
