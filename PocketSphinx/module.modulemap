@@ -1,35 +1,6 @@
 framework module PocketSphinx {
     umbrella header "PocketSphinx.h"
-
-    export Sphinx
-
+    
     export *
     module * { export * }
 }
-
-//explicit module PocketSphinx.Private [extern_c] {
-//    umbrella header "include/pocketsphinx/pocketsphinx.h"
-//}
-
-
-//framework module PocketSphinx [system][extern_c] {
-////    umbrella header "include/pocketsphinx/pocketsphinx.h"
-//
-//    umbrella header "Foo.h"
-//
-//    export *
-//    module * { export * }
-//}
-
-//module Alchemic {
-//    umbrella header "Headers/Alchemic.h"
-//    requires objc_arc
-//    export Alchemic.Private
-//    link framework "StoryTeller"
-//}
-//
-//explicit module Alchemic.Private {
-//    umbrella "PrivateHeaders"
-//    requires objc_arc
-//    link framework "StoryTeller"
-//}

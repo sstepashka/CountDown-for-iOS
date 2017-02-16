@@ -1,13 +1,24 @@
 module Sphinx {
-	module Base {
+	explicit module Base [extern_c] {
         umbrella "sphinxbase"
+        
         link "sphinxbase"
         link "sphinxad"
-	}
+	
+    }
     
-    module Pocket {
+    explicit module Pocket [extern_c] {
         umbrella header "pocketsphinx/pocketsphinx.h"
+        
         link "pocketsphinx"
+        
         export Base
     }
+    
+    explicit module Swift [extern_c] {
+        umbrella header "swift/swift.h"
+    }
+    
+    export Pocket
+    export Swift
 }
