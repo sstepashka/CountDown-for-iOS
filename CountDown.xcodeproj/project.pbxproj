@@ -25,49 +25,6 @@
 		5857FBB51E5221C70093565B /* PocketSphinx.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FBB31E5221C70093565B /* PocketSphinx.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5857FBB81E5221C70093565B /* PocketSphinx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5857FBB11E5221C70093565B /* PocketSphinx.framework */; };
 		5857FBB91E5221C70093565B /* PocketSphinx.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5857FBB11E5221C70093565B /* PocketSphinx.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5857FF3F1E558DF20093565B /* cmdln_macro.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF0F1E558DF20093565B /* cmdln_macro.h */; };
-		5857FF401E558DF20093565B /* pocketsphinx.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF101E558DF20093565B /* pocketsphinx.h */; };
-		5857FF411E558DF20093565B /* pocketsphinx_export.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF111E558DF20093565B /* pocketsphinx_export.h */; };
-		5857FF421E558DF20093565B /* ps_lattice.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF121E558DF20093565B /* ps_lattice.h */; };
-		5857FF431E558DF20093565B /* ps_mllr.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF131E558DF20093565B /* ps_mllr.h */; };
-		5857FF441E558DF20093565B /* ps_search.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF141E558DF20093565B /* ps_search.h */; };
-		5857FF451E558DF20093565B /* ad.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF161E558DF20093565B /* ad.h */; };
-		5857FF461E558DF20093565B /* agc.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF171E558DF20093565B /* agc.h */; };
-		5857FF471E558DF20093565B /* bio.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF181E558DF20093565B /* bio.h */; };
-		5857FF481E558DF20093565B /* bitarr.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF191E558DF20093565B /* bitarr.h */; };
-		5857FF491E558DF20093565B /* bitvec.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF1A1E558DF20093565B /* bitvec.h */; };
-		5857FF4A1E558DF20093565B /* byteorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF1B1E558DF20093565B /* byteorder.h */; };
-		5857FF4B1E558DF20093565B /* case.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF1C1E558DF20093565B /* case.h */; };
-		5857FF4C1E558DF20093565B /* ckd_alloc.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF1D1E558DF20093565B /* ckd_alloc.h */; };
-		5857FF4D1E558DF20093565B /* clapack_lite.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF1E1E558DF20093565B /* clapack_lite.h */; };
-		5857FF4E1E558DF20093565B /* cmd_ln.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF1F1E558DF20093565B /* cmd_ln.h */; };
-		5857FF4F1E558DF20093565B /* cmn.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF201E558DF20093565B /* cmn.h */; };
-		5857FF501E558DF20093565B /* err.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF211E558DF20093565B /* err.h */; };
-		5857FF511E558DF20093565B /* f2c.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF221E558DF20093565B /* f2c.h */; };
-		5857FF521E558DF20093565B /* fe.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF231E558DF20093565B /* fe.h */; };
-		5857FF531E558DF20093565B /* feat.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF241E558DF20093565B /* feat.h */; };
-		5857FF541E558DF20093565B /* filename.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF251E558DF20093565B /* filename.h */; };
-		5857FF551E558DF20093565B /* fixpoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF261E558DF20093565B /* fixpoint.h */; };
-		5857FF561E558DF20093565B /* fsg_model.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF271E558DF20093565B /* fsg_model.h */; };
-		5857FF571E558DF20093565B /* genrand.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF281E558DF20093565B /* genrand.h */; };
-		5857FF581E558DF20093565B /* glist.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF291E558DF20093565B /* glist.h */; };
-		5857FF591E558DF20093565B /* hash_table.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF2A1E558DF20093565B /* hash_table.h */; };
-		5857FF5A1E558DF20093565B /* heap.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF2B1E558DF20093565B /* heap.h */; };
-		5857FF5B1E558DF20093565B /* jsgf.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF2C1E558DF20093565B /* jsgf.h */; };
-		5857FF5C1E558DF20093565B /* listelem_alloc.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF2D1E558DF20093565B /* listelem_alloc.h */; };
-		5857FF5D1E558DF20093565B /* logmath.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF2E1E558DF20093565B /* logmath.h */; };
-		5857FF5E1E558DF20093565B /* matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF2F1E558DF20093565B /* matrix.h */; };
-		5857FF5F1E558DF20093565B /* mmio.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF301E558DF20093565B /* mmio.h */; };
-		5857FF601E558DF20093565B /* ngram_model.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF311E558DF20093565B /* ngram_model.h */; };
-		5857FF611E558DF20093565B /* pio.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF321E558DF20093565B /* pio.h */; };
-		5857FF621E558DF20093565B /* prim_type.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF331E558DF20093565B /* prim_type.h */; };
-		5857FF631E558DF20093565B /* priority_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF341E558DF20093565B /* priority_queue.h */; };
-		5857FF641E558DF20093565B /* profile.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF351E558DF20093565B /* profile.h */; };
-		5857FF651E558DF20093565B /* sbthread.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF361E558DF20093565B /* sbthread.h */; };
-		5857FF661E558DF20093565B /* sphinx_config.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF371E558DF20093565B /* sphinx_config.h */; };
-		5857FF671E558DF20093565B /* sphinxbase_export.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF381E558DF20093565B /* sphinxbase_export.h */; };
-		5857FF681E558DF20093565B /* strfuncs.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF391E558DF20093565B /* strfuncs.h */; };
-		5857FF691E558DF20093565B /* yin.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FF3A1E558DF20093565B /* yin.h */; };
 		5857FF6A1E558DF20093565B /* libpocketsphinx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5857FF3C1E558DF20093565B /* libpocketsphinx.a */; };
 		5857FF6B1E558DF20093565B /* libsphinxad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5857FF3D1E558DF20093565B /* libsphinxad.a */; };
 		5857FF6C1E558DF20093565B /* libsphinxbase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5857FF3E1E558DF20093565B /* libsphinxbase.a */; };
@@ -327,10 +284,10 @@
 		5857FF0C1E558DF20093565B /* include */ = {
 			isa = PBXGroup;
 			children = (
-				58E56BEC1E55FC1900A59E95 /* swift */,
 				5857FF731E5592040093565B /* module.modulemap */,
 				5857FF0E1E558DF20093565B /* pocketsphinx */,
 				5857FF151E558DF20093565B /* sphinxbase */,
+				58E56BEC1E55FC1900A59E95 /* swift */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -418,51 +375,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5857FF621E558DF20093565B /* prim_type.h in Headers */,
-				5857FF5F1E558DF20093565B /* mmio.h in Headers */,
-				5857FF681E558DF20093565B /* strfuncs.h in Headers */,
-				5857FF631E558DF20093565B /* priority_queue.h in Headers */,
-				5857FF5B1E558DF20093565B /* jsgf.h in Headers */,
-				5857FF4D1E558DF20093565B /* clapack_lite.h in Headers */,
-				5857FF611E558DF20093565B /* pio.h in Headers */,
-				5857FF5C1E558DF20093565B /* listelem_alloc.h in Headers */,
-				5857FF5E1E558DF20093565B /* matrix.h in Headers */,
-				5857FF591E558DF20093565B /* hash_table.h in Headers */,
-				5857FF411E558DF20093565B /* pocketsphinx_export.h in Headers */,
-				5857FF691E558DF20093565B /* yin.h in Headers */,
-				5857FF511E558DF20093565B /* f2c.h in Headers */,
-				5857FF501E558DF20093565B /* err.h in Headers */,
-				5857FF571E558DF20093565B /* genrand.h in Headers */,
-				5857FF4A1E558DF20093565B /* byteorder.h in Headers */,
-				5857FF4F1E558DF20093565B /* cmn.h in Headers */,
-				5857FF3F1E558DF20093565B /* cmdln_macro.h in Headers */,
-				5857FF5D1E558DF20093565B /* logmath.h in Headers */,
-				5857FF5A1E558DF20093565B /* heap.h in Headers */,
-				5857FF431E558DF20093565B /* ps_mllr.h in Headers */,
-				5857FF4B1E558DF20093565B /* case.h in Headers */,
-				5857FF421E558DF20093565B /* ps_lattice.h in Headers */,
-				5857FF541E558DF20093565B /* filename.h in Headers */,
-				5857FF561E558DF20093565B /* fsg_model.h in Headers */,
-				5857FF401E558DF20093565B /* pocketsphinx.h in Headers */,
-				5857FF481E558DF20093565B /* bitarr.h in Headers */,
 				5857FBB51E5221C70093565B /* PocketSphinx.h in Headers */,
-				5857FF641E558DF20093565B /* profile.h in Headers */,
-				5857FF461E558DF20093565B /* agc.h in Headers */,
-				5857FF441E558DF20093565B /* ps_search.h in Headers */,
-				5857FF601E558DF20093565B /* ngram_model.h in Headers */,
-				5857FF581E558DF20093565B /* glist.h in Headers */,
-				5857FF661E558DF20093565B /* sphinx_config.h in Headers */,
-				5857FF521E558DF20093565B /* fe.h in Headers */,
-				5857FF551E558DF20093565B /* fixpoint.h in Headers */,
-				5857FF4C1E558DF20093565B /* ckd_alloc.h in Headers */,
-				5857FF4E1E558DF20093565B /* cmd_ln.h in Headers */,
 				58E56BF01E55FC3500A59E95 /* swift.h in Headers */,
-				5857FF531E558DF20093565B /* feat.h in Headers */,
-				5857FF451E558DF20093565B /* ad.h in Headers */,
-				5857FF651E558DF20093565B /* sbthread.h in Headers */,
-				5857FF671E558DF20093565B /* sphinxbase_export.h in Headers */,
-				5857FF471E558DF20093565B /* bio.h in Headers */,
-				5857FF491E558DF20093565B /* bitvec.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,11 @@ import Sphinx
 
 public class Helper {
     init() {
-        
+        cmd_ln_init_swift(
+            nil,
+            .none,
+            1,
+            getVaList(["", ""])
+        )
     }
 }
