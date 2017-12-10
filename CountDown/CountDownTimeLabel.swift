@@ -59,8 +59,8 @@ class CountDownTimeLabel: UIView {
         label.minimumScaleFactor = 0.01
         label.numberOfLines = 1
         
-        label.setContentCompressionResistancePriority(UILayoutPriorityDefaultHigh, for: .vertical)
-        label.setContentCompressionResistancePriority(UILayoutPriorityDefaultHigh, for: .horizontal)
+        label.setContentCompressionResistancePriority(UILayoutPriority.defaultHigh, for: .vertical)
+        label.setContentCompressionResistancePriority(UILayoutPriority.defaultHigh, for: .horizontal)
         
         self.backgroundColor = .clear
         
