@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,28 +16,28 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRm-q2-FQd" customClass="BackgroundView" customModule="CountDown" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ma6-rt-0zM">
-                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="100" verticalCompressionResistancePriority="1000" text="With Love For You" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1k6-3O-O5s">
-                                        <rect key="frame" x="20" y="404" width="280" height="47.5"/>
+                                        <rect key="frame" x="20" y="703.66666666666663" width="353" height="47.333333333333371"/>
                                         <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="dOc-O4-qrc" customClass="CountDownTimeLabel" customModule="CountDown" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="8" width="280" height="388"/>
+                                        <rect key="frame" x="20" y="8" width="353" height="687.66666666666663"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQ4-gq-CAw">
-                                        <rect key="frame" x="245" y="8" width="67" height="34"/>
+                                        <rect key="frame" x="318" y="8" width="67" height="34"/>
                                         <state key="normal" title="Settings"/>
                                         <connections>
                                             <segue destination="MYL-MD-p9C" kind="show" id="GA3-5a-aZh"/>
@@ -49,6 +47,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="hQ4-gq-CAw" firstAttribute="top" secondItem="ma6-rt-0zM" secondAttribute="top" constant="8" id="2Rg-y0-HbI"/>
+                                    <constraint firstItem="hQ4-gq-CAw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ma6-rt-0zM" secondAttribute="leading" constant="20" symbolic="YES" id="8qJ-X5-zdI"/>
                                     <constraint firstItem="dOc-O4-qrc" firstAttribute="top" secondItem="ma6-rt-0zM" secondAttribute="top" constant="8" id="LWS-SG-IPb"/>
                                     <constraint firstItem="1k6-3O-O5s" firstAttribute="top" secondItem="dOc-O4-qrc" secondAttribute="bottom" constant="8" id="OI6-O7-YnO"/>
                                     <constraint firstAttribute="trailing" secondItem="dOc-O4-qrc" secondAttribute="trailing" constant="20" id="TPC-8U-LQm"/>
@@ -64,13 +63,13 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="bRm-q2-FQd" secondAttribute="trailing" id="02N-qH-3AV"/>
-                            <constraint firstItem="ma6-rt-0zM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4Hr-Di-h1Q"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ma6-rt-0zM" secondAttribute="bottom" id="V8l-Io-b5A"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ma6-rt-0zM" secondAttribute="bottom" id="70Q-Ep-jpU"/>
+                            <constraint firstAttribute="bottom" secondItem="bRm-q2-FQd" secondAttribute="bottom" id="UTb-zK-qHA"/>
                             <constraint firstItem="bRm-q2-FQd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="a4t-UH-D0d"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bRm-q2-FQd" secondAttribute="bottom" id="af7-Wp-x0U"/>
                             <constraint firstItem="ma6-rt-0zM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ddw-lL-d1T"/>
                             <constraint firstItem="bRm-q2-FQd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="e2I-oQ-ZTj"/>
                             <constraint firstAttribute="trailing" secondItem="ma6-rt-0zM" secondAttribute="trailing" id="uOP-Gq-8Qn"/>
+                            <constraint firstItem="ma6-rt-0zM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xd0-k9-eHG"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="tse-11-H6M" appends="YES" id="g2R-MC-wgE"/>
@@ -88,24 +87,24 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="58.920539730134934"/>
+            <point key="canvasLocation" x="23.664122137404579" y="58.450704225352112"/>
         </scene>
         <!--Settings-->
         <scene sceneID="K7k-G3-cRD">
             <objects>
                 <tableViewController id="zfo-HU-XqX" customClass="SettingsViewController" customModule="CountDown" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="DZB-SB-Afv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Vibrate" id="bhI-nd-1Td">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fg1-yo-FXo" customClass="VibrateSettingsCell" customModule="CountDown" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fg1-yo-FXo" id="Ra2-Kh-gSb">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -137,7 +136,7 @@
             <objects>
                 <navigationController id="MYL-MD-p9C" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JLs-Gn-t6A">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -149,4 +148,9 @@
             <point key="canvasLocation" x="703" y="52"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
