@@ -22,18 +22,7 @@
 		5857FBA81E51AC160093565B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5857FBA61E51AC160093565B /* SettingsViewController.swift */; };
 		5857FBA91E51AC160093565B /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5857FBA71E51AC160093565B /* Sounds.swift */; };
 		5857FBAB1E51AC310093565B /* VibrateSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5857FBAA1E51AC310093565B /* VibrateSettingsCell.swift */; };
-		5857FBB51E5221C70093565B /* PocketSphinx.h in Headers */ = {isa = PBXBuildFile; fileRef = 5857FBB31E5221C70093565B /* PocketSphinx.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5857FBB81E5221C70093565B /* PocketSphinx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5857FBB11E5221C70093565B /* PocketSphinx.framework */; };
-		5857FBB91E5221C70093565B /* PocketSphinx.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5857FBB11E5221C70093565B /* PocketSphinx.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5857FF6A1E558DF20093565B /* libpocketsphinx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5857FF3C1E558DF20093565B /* libpocketsphinx.a */; };
-		5857FF6B1E558DF20093565B /* libsphinxad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5857FF3D1E558DF20093565B /* libsphinxad.a */; };
-		5857FF6C1E558DF20093565B /* libsphinxbase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5857FF3E1E558DF20093565B /* libsphinxbase.a */; };
-		5857FF6F1E5590FB0093565B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5857FF6E1E5590FB0093565B /* File.swift */; };
-		5857FF711E5591AE0093565B /* PocketSphinx.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5857FBB31E5221C70093565B /* PocketSphinx.h */; };
 		589DB7BF1E4FF06C00418B4F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 589DB7C11E4FF06C00418B4F /* InfoPlist.strings */; };
-		58E56BEB1E55FB4E00A59E95 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E56BEA1E55FB4E00A59E95 /* OpenAL.framework */; };
-		58E56BEF1E55FC3500A59E95 /* swift.c in Sources */ = {isa = PBXBuildFile; fileRef = 58E56BED1E55FC3500A59E95 /* swift.c */; };
-		58E56BF01E55FC3500A59E95 /* swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 58E56BEE1E55FC3500A59E95 /* swift.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,13 +33,6 @@
 			remoteGlobalIDString = 582FADA91E4F888D008DADF2;
 			remoteInfo = CountDown;
 		};
-		5857FBB61E5221C70093565B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 582FADA21E4F888D008DADF2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5857FBB01E5221C70093565B;
-			remoteInfo = PocketSphinx;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,19 +42,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5857FBB91E5221C70093565B /* PocketSphinx.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5857FF701E5591950093565B /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = include/MyLibrary;
-			dstSubfolderSpec = 7;
-			files = (
-				5857FF711E5591AE0093565B /* PocketSphinx.h in CopyFiles */,
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -97,64 +68,11 @@
 		5857FBA61E51AC160093565B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5857FBA71E51AC160093565B /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		5857FBAA1E51AC310093565B /* VibrateSettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VibrateSettingsCell.swift; sourceTree = "<group>"; };
-		5857FBB11E5221C70093565B /* PocketSphinx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PocketSphinx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5857FBB31E5221C70093565B /* PocketSphinx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PocketSphinx.h; sourceTree = "<group>"; };
-		5857FBB41E5221C70093565B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5857FF0F1E558DF20093565B /* cmdln_macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmdln_macro.h; sourceTree = "<group>"; };
-		5857FF101E558DF20093565B /* pocketsphinx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pocketsphinx.h; sourceTree = "<group>"; };
-		5857FF111E558DF20093565B /* pocketsphinx_export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pocketsphinx_export.h; sourceTree = "<group>"; };
-		5857FF121E558DF20093565B /* ps_lattice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ps_lattice.h; sourceTree = "<group>"; };
-		5857FF131E558DF20093565B /* ps_mllr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ps_mllr.h; sourceTree = "<group>"; };
-		5857FF141E558DF20093565B /* ps_search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ps_search.h; sourceTree = "<group>"; };
-		5857FF161E558DF20093565B /* ad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ad.h; sourceTree = "<group>"; };
-		5857FF171E558DF20093565B /* agc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = agc.h; sourceTree = "<group>"; };
-		5857FF181E558DF20093565B /* bio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bio.h; sourceTree = "<group>"; };
-		5857FF191E558DF20093565B /* bitarr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitarr.h; sourceTree = "<group>"; };
-		5857FF1A1E558DF20093565B /* bitvec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitvec.h; sourceTree = "<group>"; };
-		5857FF1B1E558DF20093565B /* byteorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = byteorder.h; sourceTree = "<group>"; };
-		5857FF1C1E558DF20093565B /* case.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = case.h; sourceTree = "<group>"; };
-		5857FF1D1E558DF20093565B /* ckd_alloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ckd_alloc.h; sourceTree = "<group>"; };
-		5857FF1E1E558DF20093565B /* clapack_lite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clapack_lite.h; sourceTree = "<group>"; };
-		5857FF1F1E558DF20093565B /* cmd_ln.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmd_ln.h; sourceTree = "<group>"; };
-		5857FF201E558DF20093565B /* cmn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmn.h; sourceTree = "<group>"; };
-		5857FF211E558DF20093565B /* err.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = err.h; sourceTree = "<group>"; };
-		5857FF221E558DF20093565B /* f2c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = f2c.h; sourceTree = "<group>"; };
-		5857FF231E558DF20093565B /* fe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fe.h; sourceTree = "<group>"; };
-		5857FF241E558DF20093565B /* feat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feat.h; sourceTree = "<group>"; };
-		5857FF251E558DF20093565B /* filename.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filename.h; sourceTree = "<group>"; };
-		5857FF261E558DF20093565B /* fixpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fixpoint.h; sourceTree = "<group>"; };
-		5857FF271E558DF20093565B /* fsg_model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fsg_model.h; sourceTree = "<group>"; };
-		5857FF281E558DF20093565B /* genrand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = genrand.h; sourceTree = "<group>"; };
-		5857FF291E558DF20093565B /* glist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glist.h; sourceTree = "<group>"; };
-		5857FF2A1E558DF20093565B /* hash_table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash_table.h; sourceTree = "<group>"; };
-		5857FF2B1E558DF20093565B /* heap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = heap.h; sourceTree = "<group>"; };
-		5857FF2C1E558DF20093565B /* jsgf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsgf.h; sourceTree = "<group>"; };
-		5857FF2D1E558DF20093565B /* listelem_alloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = listelem_alloc.h; sourceTree = "<group>"; };
-		5857FF2E1E558DF20093565B /* logmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logmath.h; sourceTree = "<group>"; };
-		5857FF2F1E558DF20093565B /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
-		5857FF301E558DF20093565B /* mmio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mmio.h; sourceTree = "<group>"; };
-		5857FF311E558DF20093565B /* ngram_model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ngram_model.h; sourceTree = "<group>"; };
-		5857FF321E558DF20093565B /* pio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pio.h; sourceTree = "<group>"; };
-		5857FF331E558DF20093565B /* prim_type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prim_type.h; sourceTree = "<group>"; };
-		5857FF341E558DF20093565B /* priority_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = priority_queue.h; sourceTree = "<group>"; };
-		5857FF351E558DF20093565B /* profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profile.h; sourceTree = "<group>"; };
-		5857FF361E558DF20093565B /* sbthread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sbthread.h; sourceTree = "<group>"; };
-		5857FF371E558DF20093565B /* sphinx_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sphinx_config.h; sourceTree = "<group>"; };
-		5857FF381E558DF20093565B /* sphinxbase_export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sphinxbase_export.h; sourceTree = "<group>"; };
-		5857FF391E558DF20093565B /* strfuncs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strfuncs.h; sourceTree = "<group>"; };
-		5857FF3A1E558DF20093565B /* yin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yin.h; sourceTree = "<group>"; };
-		5857FF3C1E558DF20093565B /* libpocketsphinx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpocketsphinx.a; sourceTree = "<group>"; };
-		5857FF3D1E558DF20093565B /* libsphinxad.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsphinxad.a; sourceTree = "<group>"; };
-		5857FF3E1E558DF20093565B /* libsphinxbase.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsphinxbase.a; sourceTree = "<group>"; };
-		5857FF6E1E5590FB0093565B /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		5857FF731E5592040093565B /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		589DB7C01E4FF06C00418B4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		589DB7C21E4FF0E200418B4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		589DB7C41E4FF12200418B4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		589DB7C61E4FF12800418B4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		58E56BEA1E55FB4E00A59E95 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
-		58E56BED1E55FC3500A59E95 /* swift.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = swift.c; sourceTree = "<group>"; };
-		58E56BEE1E55FC3500A59E95 /* swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swift.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5857FBB81E5221C70093565B /* PocketSphinx.framework in Frameworks */,
 				582FADD11E4F9BA4008DADF2 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,17 +91,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5857FBAD1E5221C70093565B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				58E56BEB1E55FB4E00A59E95 /* OpenAL.framework in Frameworks */,
-				5857FF6B1E558DF20093565B /* libsphinxad.a in Frameworks */,
-				5857FF6C1E558DF20093565B /* libsphinxbase.a in Frameworks */,
-				5857FF6A1E558DF20093565B /* libpocketsphinx.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -193,7 +99,6 @@
 			children = (
 				582FADAC1E4F888D008DADF2 /* CountDown */,
 				582FADC11E4F888D008DADF2 /* CountDownTests */,
-				5857FBB21E5221C70093565B /* PocketSphinx */,
 				582FADAB1E4F888D008DADF2 /* Products */,
 				582FADCF1E4F9BA4008DADF2 /* Frameworks */,
 			);
@@ -204,7 +109,6 @@
 			children = (
 				582FADAA1E4F888D008DADF2 /* CountDown.app */,
 				582FADBE1E4F888D008DADF2 /* CountDownTests.xctest */,
-				5857FBB11E5221C70093565B /* PocketSphinx.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -257,126 +161,7 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		5857FBB21E5221C70093565B /* PocketSphinx */ = {
-			isa = PBXGroup;
-			children = (
-				5857FF0B1E558DF20093565B /* pocketsphinx */,
-				5857FBB31E5221C70093565B /* PocketSphinx.h */,
-				5857FBB41E5221C70093565B /* Info.plist */,
-				5857FF6E1E5590FB0093565B /* File.swift */,
-			);
-			path = PocketSphinx;
-			sourceTree = "<group>";
-		};
-		5857FF0B1E558DF20093565B /* pocketsphinx */ = {
-			isa = PBXGroup;
-			children = (
-				5857FF0C1E558DF20093565B /* include */,
-				5857FF3B1E558DF20093565B /* lib */,
-			);
-			path = pocketsphinx;
-			sourceTree = "<group>";
-		};
-		5857FF0C1E558DF20093565B /* include */ = {
-			isa = PBXGroup;
-			children = (
-				5857FF731E5592040093565B /* module.modulemap */,
-				5857FF0E1E558DF20093565B /* pocketsphinx */,
-				5857FF151E558DF20093565B /* sphinxbase */,
-				58E56BEC1E55FC1900A59E95 /* swift */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		5857FF0E1E558DF20093565B /* pocketsphinx */ = {
-			isa = PBXGroup;
-			children = (
-				5857FF0F1E558DF20093565B /* cmdln_macro.h */,
-				5857FF101E558DF20093565B /* pocketsphinx.h */,
-				5857FF111E558DF20093565B /* pocketsphinx_export.h */,
-				5857FF121E558DF20093565B /* ps_lattice.h */,
-				5857FF131E558DF20093565B /* ps_mllr.h */,
-				5857FF141E558DF20093565B /* ps_search.h */,
-			);
-			path = pocketsphinx;
-			sourceTree = "<group>";
-		};
-		5857FF151E558DF20093565B /* sphinxbase */ = {
-			isa = PBXGroup;
-			children = (
-				5857FF161E558DF20093565B /* ad.h */,
-				5857FF171E558DF20093565B /* agc.h */,
-				5857FF181E558DF20093565B /* bio.h */,
-				5857FF191E558DF20093565B /* bitarr.h */,
-				5857FF1A1E558DF20093565B /* bitvec.h */,
-				5857FF1B1E558DF20093565B /* byteorder.h */,
-				5857FF1C1E558DF20093565B /* case.h */,
-				5857FF1D1E558DF20093565B /* ckd_alloc.h */,
-				5857FF1E1E558DF20093565B /* clapack_lite.h */,
-				5857FF1F1E558DF20093565B /* cmd_ln.h */,
-				5857FF201E558DF20093565B /* cmn.h */,
-				5857FF211E558DF20093565B /* err.h */,
-				5857FF221E558DF20093565B /* f2c.h */,
-				5857FF231E558DF20093565B /* fe.h */,
-				5857FF241E558DF20093565B /* feat.h */,
-				5857FF251E558DF20093565B /* filename.h */,
-				5857FF261E558DF20093565B /* fixpoint.h */,
-				5857FF271E558DF20093565B /* fsg_model.h */,
-				5857FF281E558DF20093565B /* genrand.h */,
-				5857FF291E558DF20093565B /* glist.h */,
-				5857FF2A1E558DF20093565B /* hash_table.h */,
-				5857FF2B1E558DF20093565B /* heap.h */,
-				5857FF2C1E558DF20093565B /* jsgf.h */,
-				5857FF2D1E558DF20093565B /* listelem_alloc.h */,
-				5857FF2E1E558DF20093565B /* logmath.h */,
-				5857FF2F1E558DF20093565B /* matrix.h */,
-				5857FF301E558DF20093565B /* mmio.h */,
-				5857FF311E558DF20093565B /* ngram_model.h */,
-				5857FF321E558DF20093565B /* pio.h */,
-				5857FF331E558DF20093565B /* prim_type.h */,
-				5857FF341E558DF20093565B /* priority_queue.h */,
-				5857FF351E558DF20093565B /* profile.h */,
-				5857FF361E558DF20093565B /* sbthread.h */,
-				5857FF371E558DF20093565B /* sphinx_config.h */,
-				5857FF381E558DF20093565B /* sphinxbase_export.h */,
-				5857FF391E558DF20093565B /* strfuncs.h */,
-				5857FF3A1E558DF20093565B /* yin.h */,
-			);
-			path = sphinxbase;
-			sourceTree = "<group>";
-		};
-		5857FF3B1E558DF20093565B /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				5857FF3C1E558DF20093565B /* libpocketsphinx.a */,
-				5857FF3D1E558DF20093565B /* libsphinxad.a */,
-				5857FF3E1E558DF20093565B /* libsphinxbase.a */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		58E56BEC1E55FC1900A59E95 /* swift */ = {
-			isa = PBXGroup;
-			children = (
-				58E56BED1E55FC3500A59E95 /* swift.c */,
-				58E56BEE1E55FC3500A59E95 /* swift.h */,
-			);
-			path = swift;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		5857FBAE1E5221C70093565B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5857FBB51E5221C70093565B /* PocketSphinx.h in Headers */,
-				58E56BF01E55FC3500A59E95 /* swift.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		582FADA91E4F888D008DADF2 /* CountDown */ = {
@@ -391,7 +176,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				5857FBB71E5221C70093565B /* PBXTargetDependency */,
 			);
 			name = CountDown;
 			productName = CountDown;
@@ -416,25 +200,6 @@
 			productReference = 582FADBE1E4F888D008DADF2 /* CountDownTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5857FBB01E5221C70093565B /* PocketSphinx */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5857FBBA1E5221C70093565B /* Build configuration list for PBXNativeTarget "PocketSphinx" */;
-			buildPhases = (
-				5857FBAC1E5221C70093565B /* Sources */,
-				5857FBAD1E5221C70093565B /* Frameworks */,
-				5857FBAE1E5221C70093565B /* Headers */,
-				5857FBAF1E5221C70093565B /* Resources */,
-				5857FF701E5591950093565B /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PocketSphinx;
-			productName = PocketSphinx;
-			productReference = 5857FBB11E5221C70093565B /* PocketSphinx.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -457,12 +222,6 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 582FADA91E4F888D008DADF2;
 					};
-					5857FBB01E5221C70093565B = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 44LEJK9728;
-						LastSwiftMigration = 0910;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = 582FADA51E4F888D008DADF2 /* Build configuration list for PBXProject "CountDown" */;
@@ -470,6 +229,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				ru,
@@ -481,7 +241,6 @@
 			targets = (
 				582FADA91E4F888D008DADF2 /* CountDown */,
 				582FADBD1E4F888D008DADF2 /* CountDownTests */,
-				5857FBB01E5221C70093565B /* PocketSphinx */,
 			);
 		};
 /* End PBXProject section */
@@ -499,13 +258,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		582FADBC1E4F888D008DADF2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5857FBAF1E5221C70093565B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -540,15 +292,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5857FBAC1E5221C70093565B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5857FF6F1E5590FB0093565B /* File.swift in Sources */,
-				58E56BEF1E55FC3500A59E95 /* swift.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -556,11 +299,6 @@
 			isa = PBXTargetDependency;
 			target = 582FADA91E4F888D008DADF2 /* CountDown */;
 			targetProxy = 582FADBF1E4F888D008DADF2 /* PBXContainerItemProxy */;
-		};
-		5857FBB71E5221C70093565B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5857FBB01E5221C70093565B /* PocketSphinx */;
-			targetProxy = 5857FBB61E5221C70093565B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -703,11 +441,9 @@
 		582FADC81E4F888D008DADF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 44LEJK9728;
 				INFOPLIST_FILE = CountDown/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.api.ai.CountDown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -719,11 +455,9 @@
 		582FADC91E4F888D008DADF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 44LEJK9728;
 				INFOPLIST_FILE = CountDown/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.api.ai.CountDown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -762,75 +496,6 @@
 			};
 			name = Release;
 		};
-		5857FBBB1E5221C70093565B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 44LEJK9728;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/PocketSphinx/pocketsphinx/include/**";
-				INFOPLIST_FILE = PocketSphinx/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/PocketSphinx/pocketsphinx/lib",
-					"$(PROJECT_DIR)/PocketSphinx/pocketsphinx/lib",
-				);
-				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_BUNDLE_IDENTIFIER = com.api.ai.PocketSphinx;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/PocketSphinx/pocketsphinx/include/**";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		5857FBBC1E5221C70093565B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 44LEJK9728;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/PocketSphinx/pocketsphinx/include/**";
-				INFOPLIST_FILE = PocketSphinx/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/PocketSphinx/pocketsphinx/lib",
-					"$(PROJECT_DIR)/PocketSphinx/pocketsphinx/lib",
-				);
-				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_BUNDLE_IDENTIFIER = com.api.ai.PocketSphinx;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/PocketSphinx/pocketsphinx/include/**";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -857,15 +522,6 @@
 			buildConfigurations = (
 				582FADCB1E4F888D008DADF2 /* Debug */,
 				582FADCC1E4F888D008DADF2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5857FBBA1E5221C70093565B /* Build configuration list for PBXNativeTarget "PocketSphinx" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5857FBBB1E5221C70093565B /* Debug */,
-				5857FBBC1E5221C70093565B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

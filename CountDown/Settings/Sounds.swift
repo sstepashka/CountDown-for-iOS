@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import PocketSphinx
 
 protocol SoundsSettingsType {
     var vibrate: Bool { get set }
@@ -39,6 +38,5 @@ extension UserDefaults: SoundsSettingsType {
 }
 
 final class Sounds {
-    let condig = Config()
     static var settings: SoundsSettingsType = UserDefaults.standard
 }
