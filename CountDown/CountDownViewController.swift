@@ -84,7 +84,7 @@ class CountDownViewController: UIViewController {
         
         state = .started(displayLink, .now())
         
-        displayLink.add(to: runLoop, forMode: .defaultRunLoopMode)
+        displayLink.add(to: runLoop, forMode: RunLoop.Mode.default)
         
         playStart()
     }

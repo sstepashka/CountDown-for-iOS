@@ -14,11 +14,11 @@ extension Array where Element: NSLayoutConstraint {
         NSLayoutConstraint.activate(self)
     }
     
-    func constraints(_ format: String, options opts: NSLayoutFormatOptions = [], metrics: [String : Any]? = .none, views: [String : Any]) -> [NSLayoutConstraint] {
+    func constraints(_ format: String, options opts: NSLayoutConstraint.FormatOptions = [], metrics: [String : Any]? = .none, views: [String : Any]) -> [NSLayoutConstraint] {
         return self + type(of: self).constraints(format, options: opts, metrics: metrics, views: views)
     }
     
-    static func constraints(_ format: String, options opts: NSLayoutFormatOptions = [], metrics: [String : Any]? = .none, views: [String : Any]) -> [NSLayoutConstraint] {
+    static func constraints(_ format: String, options opts: NSLayoutConstraint.FormatOptions = [], metrics: [String : Any]? = .none, views: [String : Any]) -> [NSLayoutConstraint] {
         return NSLayoutConstraint.constraints(withVisualFormat: format, options: opts, metrics: metrics, views: views)
     }
 }
