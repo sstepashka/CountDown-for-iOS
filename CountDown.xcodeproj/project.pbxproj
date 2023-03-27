@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		582FADAE1E4F888D008DADF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582FADAD1E4F888D008DADF2 /* AppDelegate.swift */; };
 		582FADB01E4F888D008DADF2 /* CountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582FADAF1E4F888D008DADF2 /* CountDownViewController.swift */; };
 		582FADB31E4F888D008DADF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582FADB11E4F888D008DADF2 /* Main.storyboard */; };
 		582FADB51E4F888D008DADF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 582FADB41E4F888D008DADF2 /* Assets.xcassets */; };
@@ -23,6 +22,8 @@
 		5857FBA91E51AC160093565B /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5857FBA71E51AC160093565B /* Sounds.swift */; };
 		5857FBAB1E51AC310093565B /* VibrateSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5857FBAA1E51AC310093565B /* VibrateSettingsCell.swift */; };
 		589DB7BF1E4FF06C00418B4F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 589DB7C11E4FF06C00418B4F /* InfoPlist.strings */; };
+		FFBB859F29D14ACB00FA82FB /* CoundDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB859E29D14ACB00FA82FB /* CoundDown.swift */; };
+		FFBB85A129D14BFC00FA82FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB85A029D14BFC00FA82FB /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +51,6 @@
 
 /* Begin PBXFileReference section */
 		582FADAA1E4F888D008DADF2 /* CountDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		582FADAD1E4F888D008DADF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		582FADAF1E4F888D008DADF2 /* CountDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownViewController.swift; sourceTree = "<group>"; };
 		582FADB21E4F888D008DADF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		582FADB41E4F888D008DADF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +73,8 @@
 		589DB7C41E4FF12200418B4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		589DB7C61E4FF12800418B4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		58E56BEA1E55FB4E00A59E95 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		FFBB859E29D14ACB00FA82FB /* CoundDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoundDown.swift; sourceTree = "<group>"; };
+		FFBB85A029D14BFC00FA82FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				5857FBA51E51AC160093565B /* Settings */,
-				582FADAD1E4F888D008DADF2 /* AppDelegate.swift */,
 				582FADAF1E4F888D008DADF2 /* CountDownViewController.swift */,
 				582FADB11E4F888D008DADF2 /* Main.storyboard */,
 				582FADB41E4F888D008DADF2 /* Assets.xcassets */,
@@ -129,6 +130,8 @@
 				582FADD61E4FD0BD008DADF2 /* Testing.swift */,
 				582FADD81E4FDF32008DADF2 /* NSLayoutConstraintExtensions.swift */,
 				589DB7C11E4FF06C00418B4F /* InfoPlist.strings */,
+				FFBB859E29D14ACB00FA82FB /* CoundDown.swift */,
+				FFBB85A029D14BFC00FA82FB /* ContentView.swift */,
 			);
 			path = CountDown;
 			sourceTree = "<group>";
@@ -271,11 +274,12 @@
 			files = (
 				5857FBAB1E51AC310093565B /* VibrateSettingsCell.swift in Sources */,
 				582FADD71E4FD0BD008DADF2 /* Testing.swift in Sources */,
+				FFBB85A129D14BFC00FA82FB /* ContentView.swift in Sources */,
 				582FADCE1E4F92E8008DADF2 /* CountDownTimeLabel.swift in Sources */,
 				582FADB01E4F888D008DADF2 /* CountDownViewController.swift in Sources */,
 				582FADD51E4FC8C5008DADF2 /* TimeIntervalExtensions.swift in Sources */,
+				FFBB859F29D14ACB00FA82FB /* CoundDown.swift in Sources */,
 				582FADD31E4FA813008DADF2 /* BackgroundView.swift in Sources */,
-				582FADAE1E4F888D008DADF2 /* AppDelegate.swift in Sources */,
 				5857FBA91E51AC160093565B /* Sounds.swift in Sources */,
 				582FADD91E4FDF32008DADF2 /* NSLayoutConstraintExtensions.swift in Sources */,
 				5857FBA81E51AC160093565B /* SettingsViewController.swift in Sources */,
