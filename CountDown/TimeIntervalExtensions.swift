@@ -2,8 +2,8 @@
 //  TimeIntervalExtensions.swift
 //  CountDown
 //
-//  Created by Kuragin Dmitriy on 12/02/2017.
-//  Copyright © 2017 Kuragin Dmitriy. All rights reserved.
+//  Created by Dmitrii Kuragin on 12/02/2017.
+//  Copyright © 2023 Dmitrii Kuragin. All rights reserved.
 //
 
 import Foundation

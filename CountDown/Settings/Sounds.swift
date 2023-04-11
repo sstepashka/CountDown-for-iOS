@@ -2,8 +2,8 @@
 //  Sounds.swift
 //  CountDown
 //
-//  Created by Kuragin Dmitriy on 13/02/2017.
-//  Copyright © 2017 Kuragin Dmitriy. All rights reserved.
+//  Created by Dmitrii Kuragin on 13/02/2017.
+//  Copyright © 2023 Dmitrii Kuragin. All rights reserved.
 //
 
 import Foundation

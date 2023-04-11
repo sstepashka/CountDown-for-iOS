@@ -209,7 +209,7 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 1430;
-				ORGANIZATIONNAME = "Kuragin Dmitriy";
+				ORGANIZATIONNAME = "Dmitrii Kuragin";
 				TargetAttributes = {
 					582FADA91E4F888D008DADF2 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -448,7 +448,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CountDown/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.api.ai.CountDown;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kuragin.CountDown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
@@ -461,7 +461,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CountDown/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.api.ai.CountDown;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kuragin.CountDown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
