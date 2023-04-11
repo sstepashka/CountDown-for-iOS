@@ -23,6 +23,7 @@
 		FFBB859F29D14ACB00FA82FB /* CoundDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB859E29D14ACB00FA82FB /* CoundDown.swift */; };
 		FFBB85A129D14BFC00FA82FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB85A029D14BFC00FA82FB /* ContentView.swift */; };
 		FFE5705F29E4C4A200B3AB59 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE5705E29E4C4A200B3AB59 /* SettingsView.swift */; };
+		FFE5706129E50E0700B3AB59 /* CountDownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE5706029E50E0700B3AB59 /* CountDownTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		FFBB859E29D14ACB00FA82FB /* CoundDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoundDown.swift; sourceTree = "<group>"; };
 		FFBB85A029D14BFC00FA82FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FFE5705E29E4C4A200B3AB59 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FFE5706029E50E0700B3AB59 /* CountDownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				589DB7C11E4FF06C00418B4F /* InfoPlist.strings */,
 				FFBB859E29D14ACB00FA82FB /* CoundDown.swift */,
 				FFBB85A029D14BFC00FA82FB /* ContentView.swift */,
+				FFE5706029E50E0700B3AB59 /* CountDownTimer.swift */,
 			);
 			path = CountDown;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				582FADCE1E4F92E8008DADF2 /* CountDownTimeLabel.swift in Sources */,
 				582FADB01E4F888D008DADF2 /* CountDownViewController.swift in Sources */,
 				582FADD51E4FC8C5008DADF2 /* TimeIntervalExtensions.swift in Sources */,
+				FFE5706129E50E0700B3AB59 /* CountDownTimer.swift in Sources */,
 				FFBB859F29D14ACB00FA82FB /* CoundDown.swift in Sources */,
 				582FADD31E4FA813008DADF2 /* BackgroundView.swift in Sources */,
 				5857FBA91E51AC160093565B /* Sounds.swift in Sources */,
