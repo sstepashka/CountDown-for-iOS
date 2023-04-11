@@ -8,6 +8,7 @@
 
 import UIKit
 import AudioToolbox
+import SwiftUI
 
 enum CountDownState {
     case started(CADisplayLink, TimeInterval)
@@ -62,8 +63,26 @@ class CountDownViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
+        
+        
 
         timeLabel.timeInterval = downTimeInterval
+    }
+    
+    @IBAction func showSettings(sender: Any) {
+        self.present(UIHostingController(rootView: SettingsView(vibration: Binding(get: {
+            return Sounds.settings.vibrate
+        }, set: { vibrate in
+            Sounds.settings.vibrate = vibrate
+        }))), animated: true);
+        
+        return
+        
+        guard let storyboard = self.storyboard else {
+            return
+        }
+        
+        self.present(storyboard.instantiateViewController(identifier: "Settings"), animated: true)
     }
     
     @IBAction func toggle(sender: Any) {

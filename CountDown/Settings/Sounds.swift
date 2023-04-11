@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SoundsSettingsType {
+protocol SoundsSettingsType: AnyObject {
     var vibrate: Bool { get set }
 }
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -40,7 +40,7 @@
                                         <rect key="frame" x="318" y="8" width="67" height="34"/>
                                         <state key="normal" title="Settings"/>
                                         <connections>
-                                            <segue destination="MYL-MD-p9C" kind="show" id="GA3-5a-aZh"/>
+                                            <action selector="showSettingsWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OSJ-Zt-AC8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -89,68 +89,5 @@
             </objects>
             <point key="canvasLocation" x="23.664122137404579" y="58.450704225352112"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="K7k-G3-cRD">
-            <objects>
-                <tableViewController id="zfo-HU-XqX" customClass="SettingsViewController" customModule="CountDown" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="DZB-SB-Afv">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
-                        <sections>
-                            <tableViewSection headerTitle="Vibrate" id="bhI-nd-1Td">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fg1-yo-FXo" customClass="VibrateSettingsCell" customModule="CountDown" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fg1-yo-FXo" id="Ra2-Kh-gSb">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="zfo-HU-XqX" id="25U-AB-T85"/>
-                            <outlet property="delegate" destination="zfo-HU-XqX" id="375-fS-2Fc"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="EDc-cf-RRw">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="PcR-jQ-30R">
-                            <connections>
-                                <action selector="doneWithSender:" destination="zfo-HU-XqX" id="g79-HB-kSx"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="vibrateCell" destination="fg1-yo-FXo" id="MW8-8h-F6d"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9bu-zr-TIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1714" y="52"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="39d-CU-bNm">
-            <objects>
-                <navigationController id="MYL-MD-p9C" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JLs-Gn-t6A">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="zfo-HU-XqX" kind="relationship" relationship="rootViewController" id="EEC-2B-kJi"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4K1-zS-LLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="703" y="52"/>
-        </scene>
     </scenes>
-    <resources>
-        <systemColor name="groupTableViewBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>
