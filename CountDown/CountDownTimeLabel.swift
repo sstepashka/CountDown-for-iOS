@@ -68,16 +68,8 @@ class CountDownTimeLabel: UIView {
     }
     
     var timeInterval: TimeInterval? = .none {
-        didSet{
+        didSet {
             if let timeInterval = timeInterval {
-//                if let prevTimeInterval = prevTimeInterval {
-//                    if abs(prevTimeInterval - timeInterval) < minimumTimeForRedraw {
-//                        return
-//                    }
-//                }
-                
-//                prevTimeInterval = timeInterval
-                
                 label.text = timeInterval.countDownString
             } else {
                 label.text = .none

@@ -9,6 +9,7 @@
 import UIKit
 import AudioToolbox
 import SwiftUI
+import Foundation
 
 enum CountDownState {
     case started(CADisplayLink, TimeInterval)
@@ -26,13 +27,13 @@ extension CountDownState {
 }
 
 extension CountDownState {
-    func elapsedTime(_ downTimeInterval: TimeInterval) -> TimeInterval {
+    func elapsedTime(_ now: TimeInterval, _ downTimeInterval: TimeInterval) -> TimeInterval {
         if downTimeInterval <= 0 {
             fatalError("'downTimeInterval' can be only greather zero")
         }
         
         if case .started(_, let startTimeInterval) = self {
-            var elapsedTime = downTimeInterval - (.now() - startTimeInterval)
+            var elapsedTime = downTimeInterval - (now - startTimeInterval)
             elapsedTime = max(elapsedTime, 0.0)
             
             return elapsedTime
@@ -43,13 +44,11 @@ extension CountDownState {
 }
 
 private let defaultDownTimeInterval: TimeInterval = 30.0
-private let defaultRunLoop = RunLoop.main
 private let defaultSystemSoundID: SystemSoundID = 1022 //1104
 
 class CountDownViewController: UIViewController {
     @IBOutlet var timeLabel: CountDownTimeLabel!
-    
-    private let runLoop = defaultRunLoop
+
     private let downTimeInterval = defaultDownTimeInterval
     private var vibrate = Sounds.settings.vibrate
     private let systemSoundID = defaultSystemSoundID
@@ -57,14 +56,12 @@ class CountDownViewController: UIViewController {
     
     private var state: CountDownState = .stopped {
         didSet {
-            timeLabel.timeInterval = state.elapsedTime(downTimeInterval)
+            timeLabel.timeInterval = state.elapsedTime(self.now(), downTimeInterval)
         }
     }
     
     override func loadView() {
         super.loadView()
-        
-        
 
         timeLabel.timeInterval = downTimeInterval
     }
@@ -75,14 +72,6 @@ class CountDownViewController: UIViewController {
         }, set: { vibrate in
             Sounds.settings.vibrate = vibrate
         }))), animated: true);
-        
-        return
-        
-        guard let storyboard = self.storyboard else {
-            return
-        }
-        
-        self.present(storyboard.instantiateViewController(identifier: "Settings"), animated: true)
     }
     
     @IBAction func toggle(sender: Any) {
@@ -93,6 +82,10 @@ class CountDownViewController: UIViewController {
         }
     }
     
+    private func now() -> TimeInterval {
+        return NSDate.timeIntervalSinceReferenceDate
+    }
+    
     private func start() {
         application.isIdleTimerDisabled = true
         
@@ -101,9 +94,9 @@ class CountDownViewController: UIViewController {
             selector: #selector(CountDownViewController.display)
         )
         
-        state = .started(displayLink, .now())
+        state = .started(displayLink, self.now())
         
-        displayLink.add(to: runLoop, forMode: RunLoop.Mode.default)
+        displayLink.add(to: RunLoop.main, forMode: .default)
         
         playStart()
     }
@@ -121,7 +114,7 @@ class CountDownViewController: UIViewController {
     
     @IBAction func display(sender: Any) {
         if case .started(_, let startTimeInterval) = state {
-            var elapsedTime = downTimeInterval - (.now() - startTimeInterval)
+            var elapsedTime = downTimeInterval - (self.now() - startTimeInterval)
             elapsedTime = max(elapsedTime, 0.0)
             
             timeLabel.timeInterval = elapsedTime

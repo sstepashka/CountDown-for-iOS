@@ -13,7 +13,7 @@ struct VibrationRow: View {
     
     var body: some View {
         return HStack {
-            Toggle("Vibration", isOn: $isOn)
+            Toggle(LocalizedStringKey("Vibration"), isOn: $isOn)
         };
     }
 }
@@ -28,11 +28,11 @@ struct SettingsView: View {
                 List {
                     VibrationRow(isOn: $vibration)
                 }
-            }   .navigationTitle("Settings")
+            }   .navigationTitle(LocalizedStringKey("Settings"))
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem (placement: .navigationBarTrailing) {
-                        Button("Done") {
+                        Button(LocalizedStringKey("Done")) {
                             dismiss()
                         }
                     }

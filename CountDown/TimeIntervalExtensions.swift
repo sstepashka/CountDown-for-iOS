@@ -8,24 +8,6 @@
 
 import Foundation
 
-internal protocol TimeIntervalProvider {
-    func now() -> TimeInterval
-}
-
-fileprivate class NSDateTimeIntervalProvider: TimeIntervalProvider {
-    func now() -> TimeInterval {
-        return NSDate.timeIntervalSinceReferenceDate
-    }
-}
-
-internal var defaultTimeIntervalProvider: TimeIntervalProvider = NSDateTimeIntervalProvider()
-
-extension TimeInterval {
-    static func now() -> TimeInterval {
-        return defaultTimeIntervalProvider.now()
-    }
-}
-
 extension TimeInterval {
     var seconds: Int {
         return Int(floor(self))
