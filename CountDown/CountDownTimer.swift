@@ -51,7 +51,7 @@ class CountDownTimer/*: ObservableObject*/ {
         }
     }
     
-    let update: (TimeInterval) -> Void
+    var update: (TimeInterval) -> Void
     
     let downTimeInterval = 30.0
     private var vibrate = Sounds.settings.vibrate
@@ -69,6 +69,10 @@ class CountDownTimer/*: ObservableObject*/ {
     }
     
     func start() {
+        if self.state.started {
+            return
+        }
+        
         application.isIdleTimerDisabled = true
         
         let displayLink = CADisplayLink(
