@@ -23,12 +23,6 @@ struct TimerLabel: UIViewRepresentable {
     }
 }
 
-struct TimerView: View {
-    var body: some View {
-        MyBackgroundView()
-    }
-}
-
 class ViewModel: ObservableObject {
     @Published var timeInterval: TimeInterval = 30.0
     
