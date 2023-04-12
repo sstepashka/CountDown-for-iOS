@@ -8,40 +8,30 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
-private let topColor = UIColor(
-    red:    245.0 / 255.0,
-    green:  51.0 / 255.0,
-    blue:   146.0 / 255.0,
-    alpha:  1.0
-)
-
-private let bottomColor = UIColor(
-    red:    184.0 / 255.0,
-    green:  40.0 / 255.0,
-    blue:   240.0 / 255.0,
-    alpha:  1.0
-)
-
-private let defaultColors = [
-    topColor.cgColor,
-    bottomColor.cgColor
-]
-
-class BackgroundLayer: CAGradientLayer {
-    override init() {
-        super.init()
-        colors = defaultColors
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+struct MyBackgroundView: View {
+    var body: some View {
+        Rectangle()
+            .fill(
+                .linearGradient(
+                    Gradient(colors: [
+                        Color(
+                            red: 245.0 / 255.0,
+                            green: 51.0 / 255.0,
+                            blue: 146.0 / 255.0),
+                        Color(
+                            red: 184.0 / 255.0,
+                            green: 40.0 / 255.0,
+                            blue: 240.0 / 255.0),
+                    ]),
+                    startPoint: UnitPoint(x: 0.0, y: 0.0),
+                    endPoint: UnitPoint(x: 0.0, y: 1.0)))
     }
 }
 
-@IBDesignable
-class BackgroundView: UIView {
-    override class var layerClass: AnyClass {
-        return BackgroundLayer.self
+struct NBackgroundView_Previews: PreviewProvider {
+    static var previews: some View {
+        MyBackgroundView()
     }
 }

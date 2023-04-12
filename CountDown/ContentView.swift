@@ -9,16 +9,6 @@
 import SwiftUI
 import Dispatch
 
-struct MyBackgroundView: UIViewRepresentable {
-    func makeUIView(context: Context) -> BackgroundView {
-        return BackgroundView()
-    }
-    
-    func updateUIView(_ uiView: BackgroundView, context: Context) {
-        
-    }
-}
-
 struct TimerLabel: UIViewRepresentable {
     @Binding var timeInterval: TimeInterval
     
