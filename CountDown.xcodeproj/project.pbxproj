@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		582FADB01E4F888D008DADF2 /* CountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582FADAF1E4F888D008DADF2 /* CountDownViewController.swift */; };
 		582FADB51E4F888D008DADF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 582FADB41E4F888D008DADF2 /* Assets.xcassets */; };
 		582FADB81E4F888D008DADF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582FADB61E4F888D008DADF2 /* LaunchScreen.storyboard */; };
 		582FADC31E4F888D008DADF2 /* CountDownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582FADC21E4F888D008DADF2 /* CountDownTests.swift */; };
@@ -50,7 +49,6 @@
 
 /* Begin PBXFileReference section */
 		582FADAA1E4F888D008DADF2 /* CountDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		582FADAF1E4F888D008DADF2 /* CountDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownViewController.swift; sourceTree = "<group>"; };
 		582FADB41E4F888D008DADF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		582FADB71E4F888D008DADF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		582FADB91E4F888D008DADF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				5857FBA51E51AC160093565B /* Settings */,
-				582FADAF1E4F888D008DADF2 /* CountDownViewController.swift */,
 				582FADB41E4F888D008DADF2 /* Assets.xcassets */,
 				582FADB61E4F888D008DADF2 /* LaunchScreen.storyboard */,
 				582FADB91E4F888D008DADF2 /* Info.plist */,
@@ -270,7 +267,6 @@
 				582FADD71E4FD0BD008DADF2 /* Testing.swift in Sources */,
 				FFBB85A129D14BFC00FA82FB /* ContentView.swift in Sources */,
 				582FADCE1E4F92E8008DADF2 /* CountDownTimeLabel.swift in Sources */,
-				582FADB01E4F888D008DADF2 /* CountDownViewController.swift in Sources */,
 				582FADD51E4FC8C5008DADF2 /* TimeIntervalExtensions.swift in Sources */,
 				FFE5706129E50E0700B3AB59 /* CountDownTimer.swift in Sources */,
 				FFBB859F29D14ACB00FA82FB /* CoundDown.swift in Sources */,
