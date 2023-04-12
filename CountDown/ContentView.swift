@@ -56,7 +56,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            MyBackgroundView()
+            BackgroundView()
                 .ignoresSafeArea()
             VStack {
                 HStack {

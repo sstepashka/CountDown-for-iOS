@@ -9,8 +9,6 @@
 import Foundation
 import UIKit
 
-private let minimumTimeForRedraw = 0.0097
-
 private let defaultFont = UIFont(name: "HelveticaNeue-Light", size: 400.0)
 private let defaultTextColor: UIColor = .white
 

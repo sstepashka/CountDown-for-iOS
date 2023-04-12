@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SwiftUI
 
-struct MyBackgroundView: View {
+struct BackgroundView: View {
     var body: some View {
         Rectangle()
             .fill(
@@ -32,6 +32,6 @@ struct MyBackgroundView: View {
 
 struct NBackgroundView_Previews: PreviewProvider {
     static var previews: some View {
-        MyBackgroundView()
+        BackgroundView()
     }
 }
