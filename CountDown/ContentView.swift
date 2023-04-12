@@ -30,9 +30,7 @@ class ViewModel: ObservableObject {
     
     init() {
         self.timer = CountDownTimer { newTimeInterval in
-            DispatchQueue.main.async {
-                self.timeInterval = newTimeInterval
-            }
+            self.timeInterval = newTimeInterval
         }
     }
     
