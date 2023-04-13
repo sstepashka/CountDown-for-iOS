@@ -7,40 +7,8 @@
 //
 
 import SwiftUI
-import Dispatch
-
-struct TimerLabel: UIViewRepresentable {
-    @Binding var timeInterval: TimeInterval
-    
-    func makeUIView(context: Context) -> CountDownTimeLabel {  
-        let label = CountDownTimeLabel()
-        label.timeInterval = 30.0
-        return label
-    }
-    
-    func updateUIView(_ uiView: CountDownTimeLabel, context: Context) {
-        uiView.timeInterval = timeInterval
-    }
-}
-
-class ViewModel: ObservableObject {
-    @Published var timeInterval: TimeInterval = 30.0
-    
-    private var timer: CountDownTimer!
-    
-    init() {
-        self.timer = CountDownTimer { newTimeInterval in
-            self.timeInterval = newTimeInterval
-        }
-    }
-    
-    func toggle() {
-        self.timer.toggle()
-    }
-}
 
 struct ContentView: View {
-    @State var timeInterval: TimeInterval = 30.0
     @State var showSettings: Bool = false
     @State var vibration: Bool = false
     
@@ -54,7 +22,6 @@ struct ContentView: View {
                 HStack {
                     Spacer()
                     Button("Settings") {
-                        viewModel.timeInterval = 20
                         showSettings.toggle()
                     }.padding().foregroundColor(.white)
                 }
@@ -64,10 +31,7 @@ struct ContentView: View {
                         TapGesture().onEnded({
                             viewModel.toggle()
                         }))
-                Text(LocalizedStringKey("With Love For You"))
-                    .foregroundColor(.white)
-                    .padding()
-                    .font(Font.custom("Zapfino", size: 14.0))
+                
             }
         }.sheet(isPresented: $showSettings) {
             SettingsView(vibration: $vibration)

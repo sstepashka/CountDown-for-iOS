@@ -146,3 +146,19 @@ class CountDownTimer/*: ObservableObject*/ {
         AudioServicesPlaySystemSound(systemSoundID)
     }
 }
+
+class ViewModel: ObservableObject {
+    @Published var timeInterval: TimeInterval = 30.0
+    
+    private var timer: CountDownTimer!
+    
+    init() {
+        self.timer = CountDownTimer { newTimeInterval in
+            self.timeInterval = newTimeInterval
+        }
+    }
+    
+    func toggle() {
+        self.timer.toggle()
+    }
+}
