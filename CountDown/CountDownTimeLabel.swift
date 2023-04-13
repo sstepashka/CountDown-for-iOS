@@ -10,15 +10,14 @@ import Foundation
 import SwiftUI
 
 struct TimerLabel: View {
-    @Binding var timeInterval: TimeInterval
+    @Binding var timeInterval: String
     
     var body: some View {
         ZStack {
-            Text(timeInterval.countDownString)
+            Text(timeInterval)
                 .font(.custom("HelveticaNeue-Light", size: 400.0))
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .border(.blue)
                 .lineLimit(1)
                 .minimumScaleFactor(0.001)
         }
@@ -27,13 +26,13 @@ struct TimerLabel: View {
 
 struct TimerLabel_Previews: PreviewProvider {
     static var previews: some View {
-        TimerLabel(timeInterval: .constant(29.98))
+        TimerLabel(timeInterval: .constant("29.98"))
             .background(.black)
             .previewDevice(PreviewDevice(rawValue: "iPhone 14"))
             .previewInterfaceOrientation(.landscapeLeft)
             .previewDisplayName("landscape")
         
-        TimerLabel(timeInterval: .constant(29.98))
+        TimerLabel(timeInterval: .constant("29.98"))
             .background(.black)
             .previewDevice(PreviewDevice(rawValue: "iPhone 14"))
             .previewInterfaceOrientation(.portrait)

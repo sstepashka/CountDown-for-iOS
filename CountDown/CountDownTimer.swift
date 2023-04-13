@@ -148,13 +148,13 @@ class CountDownTimer{
 }
 
 class ViewModel: ObservableObject {
-    @Published var timeInterval: TimeInterval = 30.0
+    @Published var timeInterval: String = "30.0"
     
     private var timer: CountDownTimer!
     
     init() {
         self.timer = CountDownTimer { newTimeInterval in
-            self.timeInterval = newTimeInterval
+            self.timeInterval = newTimeInterval.countDownString
         }
     }
     

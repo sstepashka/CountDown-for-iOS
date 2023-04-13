@@ -9,6 +9,9 @@
 import XCTest
 @testable import CountDown
 
+protocol Clock {
+    
+}
 
 class CountDownTests: XCTestCase {
     func testTimeIntervalExtensions() {
