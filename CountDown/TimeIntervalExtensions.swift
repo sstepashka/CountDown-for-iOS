@@ -20,9 +20,6 @@ extension TimeInterval {
 
 extension TimeInterval {
     var countDownString: String {
-        let seconds = self.seconds
-        let fraction = self.fraction
-        
-        return String(format: "%02d:%02d", seconds, fraction)
+        return String(format: "%02d:%02d", self.seconds, self.fraction)
     }
 }
