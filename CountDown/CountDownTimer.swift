@@ -44,8 +44,8 @@ extension CountDownState {
     }
 }
 
-class CountDownTimer/*: ObservableObject*/ {
-    /*@Published*/ var timeInterval: TimeInterval = 30.0 {
+class CountDownTimer{
+    var timeInterval: TimeInterval = 30.0 {
         didSet {
             update(timeInterval)
         }
