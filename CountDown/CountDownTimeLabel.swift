@@ -11,7 +11,7 @@ import SwiftUI
 
 struct TimerLabel: View {
     @Binding var timeInterval: String
-    
+
     var body: some View {
         ZStack {
             Text(timeInterval)
@@ -31,7 +31,7 @@ struct TimerLabel_Previews: PreviewProvider {
             .previewDevice(PreviewDevice(rawValue: "iPhone 14"))
             .previewInterfaceOrientation(.landscapeLeft)
             .previewDisplayName("landscape")
-        
+
         TimerLabel(timeInterval: .constant("29.98"))
             .background(.black)
             .previewDevice(PreviewDevice(rawValue: "iPhone 14"))

@@ -10,7 +10,7 @@ import AppIntents
 
 struct AppIntentsExtension: AppIntent {
     static var title: LocalizedStringResource = "AppIntentsExtension"
-    
+
     func perform() async throws -> some IntentResult {
         return .result()
     }

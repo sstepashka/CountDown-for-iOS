@@ -12,7 +12,7 @@ extension TimeInterval {
     var seconds: Int {
         return Int(floor(self))
     }
-    
+
     var fraction: Int {
         return Int(floor((self - floor(self)) * 100))
     }

@@ -19,7 +19,7 @@ extension UserDefaults: SoundsSettingsType {
     private struct Keys {
         static let vibrateKey = "vibrateKey"
     }
-    
+
     var vibrate: Bool {
         get {
             if let _ = self.object(forKey: Keys.vibrateKey) {
@@ -27,9 +27,9 @@ extension UserDefaults: SoundsSettingsType {
             } else {
                 return Defaults.vibrate
             }
-            
+
         }
-        
+
         set {
             self.set(newValue, forKey: Keys.vibrateKey)
             self.synchronize()

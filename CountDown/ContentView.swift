@@ -11,9 +11,9 @@ import SwiftUI
 struct ContentView: View {
     @State var showSettings: Bool = false
     @State var vibration: Bool = false
-    
+
     @StateObject var viewModel = ViewModel()
-    
+
     var body: some View {
         ZStack {
             BackgroundView()
@@ -31,7 +31,7 @@ struct ContentView: View {
                         TapGesture().onEnded({
                             viewModel.toggle()
                         }))
-                
+
             }
         }.sheet(isPresented: $showSettings) {
             SettingsView(vibration: $vibration)

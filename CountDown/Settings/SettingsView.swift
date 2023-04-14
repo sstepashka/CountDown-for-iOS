@@ -10,7 +10,7 @@ import SwiftUI
 
 struct VibrationRow: View {
     @Binding var isOn: Bool
-    
+
     var body: some View {
         return HStack {
             Toggle(LocalizedStringKey("Vibration"), isOn: $isOn)
@@ -21,7 +21,7 @@ struct VibrationRow: View {
 struct SettingsView: View {
     @Binding var vibration: Bool
     @Environment(\.dismiss) private var dismiss
-    
+
     var body: some View {
         NavigationStack {
             NavigationView {
