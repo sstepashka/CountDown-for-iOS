@@ -9,11 +9,82 @@
 import XCTest
 @testable import CountDown
 
-protocol Clock {
-
-}
+import Foundation
 
 class CountDownTests: XCTestCase {
+    func testCreateMyTimer() {
+        let _ = MyTimer()
+    }
+
+    func testCreateMyTimerWithCustomDuration() {
+        let _ = MyTimer(duration: 25.0)
+    }
+
+    func testFailToCreateMyTimeWithNegativeDuration() {
+        XCTAssert(MyTimer(duration: -1.0) == nil)
+    }
+
+    func testFailToCreateMyTimeWithZeroDuration() {
+        XCTAssert(MyTimer(duration: 0.0) == nil)
+        XCTAssert(MyTimer(duration: -0.0) == nil)
+    }
+
+    func testStartTimer() {
+        var timer = MyTimer(duration: 30.0)
+        XCTAssert(timer != nil)
+        timer!.start(now: 10.0)
+    }
+
+    func testTimeLeftReturns20When10SecondsPass() {
+        var timer = MyTimer(duration: 30.0)!
+        timer.start(now: 5837.0)
+        XCTAssertEqual(timer.timeLeft(now: 5837.0), 30.0)
+    }
+
+    func testLeftTimeAfterUpdate() {
+        var timer = MyTimer(duration: 30.0)!
+
+        timer.start(now: 5837.0)
+
+        XCTAssertEqual(timer.timeLeft(now: 5848.0), 19.0, accuracy: 0.01)
+    }
+
+    func testLeftTimeResetToDurationWhenTimerIsStopped() {
+        var timer = MyTimer(duration: 30.0)!
+
+        timer.start(now: 5837.0)
+
+        XCTAssertEqual(timer.timeLeft(now: 5848.0), 19.0, accuracy: 0.01)
+
+        timer.stop()
+
+        XCTAssertEqual(timer.timeLeft(now: 5849.0), 30.0, accuracy: 0.01)
+    }
+
+    func testStartedIsFalseBeforeStart() {
+        let timer = MyTimer(duration: 30.0)!
+        XCTAssertFalse(timer.started)
+    }
+
+    func testStartedIsFalseAfterStop() {
+        var timer = MyTimer(duration: 30.0)!
+        timer.start(now: 1234.0)
+        timer.stop()
+        XCTAssertFalse(timer.started)
+    }
+
+    func testStartedIsTrueAfterStart() {
+        var timer = MyTimer(duration: 30.0)!
+        timer.start(now: 2423.0)
+        XCTAssertTrue(timer.started)
+    }
+
+    func testLeftTimeWhenNotStartedEqualsToDuration() {
+        let timer = MyTimer(duration: 30.0)!
+
+        XCTAssertEqual(timer.timeLeft(now: 6453.0), 30.0, accuracy: 0.01)
+    }
+
     func testTimeIntervalExtensions() {
         let timeInterval1: TimeInterval = 30.129
 

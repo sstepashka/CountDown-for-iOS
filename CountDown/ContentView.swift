@@ -10,14 +10,12 @@ import SwiftUI
 
 struct ContentView: View {
     @State var showSettings: Bool = false
-    @State var vibration: Bool = false
 
     @StateObject var viewModel = ViewModel()
 
     var body: some View {
         ZStack {
-            BackgroundView()
-                .ignoresSafeArea()
+            BackgroundView().ignoresSafeArea()
             VStack {
                 HStack {
                     Spacer()
@@ -27,14 +25,14 @@ struct ContentView: View {
                 }
                 TimerLabel(timeInterval: $viewModel.timeInterval)
                     .padding()
-                    .gesture(
-                        TapGesture().onEnded({
-                            viewModel.toggle()
-                        }))
-
             }
-        }.sheet(isPresented: $showSettings) {
-            SettingsView(vibration: $vibration)
+        }
+        .gesture(
+            TapGesture().onEnded({
+                viewModel.toggle()
+            }))
+        .sheet(isPresented: $showSettings) {
+            SettingsView(vibration: $viewModel.vibration)
         }
     }
 }

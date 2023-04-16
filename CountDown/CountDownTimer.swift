@@ -12,39 +12,89 @@ import Combine
 import AudioToolbox
 import UIKit
 
-enum CountDownState {
-    case started(CADisplayLink, TimeInterval)
-    case stopped
-}
+struct MyTimer {
+    private let duration: TimeInterval
+    private var startTime: TimeInterval?
 
-extension CountDownState {
     var started: Bool {
-        if case .started(_, _) = self {
-            return true
+        return startTime != nil
+    }
+
+    init?(duration: TimeInterval = 30.0) {
+        if duration <= 0.0 {
+            return nil
         }
 
-        return false
+        self.duration = duration
+    }
+
+    func timeLeft(now: TimeInterval) -> TimeInterval {
+        guard let startTime = startTime else {
+            return duration
+        }
+
+        return duration - (now - startTime)
+    }
+
+    mutating func start(now: TimeInterval) {
+        startTime = now
+    }
+
+    mutating func stop() {
+        startTime = nil
+    }
+
+    mutating func toggle(now: TimeInterval) {
+        if startTime == nil {
+            self.start(now: now)
+        } else {
+            self.stop()
+        }
     }
 }
 
-extension CountDownState {
-    func elapsedTime(_ now: TimeInterval, _ downTimeInterval: TimeInterval) -> TimeInterval {
-        if downTimeInterval <= 0 {
-            fatalError("'downTimeInterval' can be only greather zero")
+class FrameUpdater {
+    private var displayLink: CADisplayLink!
+    private var listener: (() -> Void)?
+
+    init() {
+        self.displayLink = CADisplayLink(
+            target: self,
+            selector: #selector(FrameUpdater.display)
+        )
+    }
+
+    func listen(update: @escaping () -> Void) {
+        guard listener == nil else {
+            return
         }
 
-        if case .started(_, let startTimeInterval) = self {
-            var elapsedTime = downTimeInterval - (now - startTimeInterval)
-            elapsedTime = max(elapsedTime, 0.0)
+        listener = update
+        self.displayLink.add(to: RunLoop.main, forMode: .default)
+    }
 
-            return elapsedTime
-        }
+    func stop() {
+        self.displayLink.remove(from: RunLoop.main, forMode: .default)
+    }
 
-        return downTimeInterval
+    @objc func display(sender: Any) {
+        listener?()
     }
 }
 
-class CountDownTimer{
+class IdleTimer {
+    private let application = UIApplication.shared
+
+    func enable() {
+        application.isIdleTimerDisabled = false
+    }
+
+    func disable() {
+        application.isIdleTimerDisabled = true
+    }
+}
+
+class CountDownTimer {
     var timeInterval: TimeInterval = 30.0 {
         didSet {
             update(timeInterval)
@@ -53,68 +103,41 @@ class CountDownTimer{
 
     var update: (TimeInterval) -> Void
 
-    let downTimeInterval = 30.0
+    let downTimeInterval = 5.0
     private var vibrate = Sounds.settings.vibrate
     private let systemSoundID: SystemSoundID = 1022 //1104
-    private let application = UIApplication.shared
+    private let idleTimer = IdleTimer()
 
-    private var state: CountDownState = .stopped {
-        didSet {
-            timeInterval = state.elapsedTime(self.now(), downTimeInterval)
-        }
-    }
+    private var frameUpdater = FrameUpdater()
+
+    private var mTimer: MyTimer
 
     init(update: @escaping (TimeInterval) -> Void) {
         self.update = update
+        mTimer = MyTimer(duration: downTimeInterval)!
     }
 
     func start() {
-        if self.state.started {
-            return
+        mTimer.start(now: self.now())
+        idleTimer.disable()
+        frameUpdater.listen {
+            self.display()
         }
-
-        application.isIdleTimerDisabled = true
-
-        let displayLink = CADisplayLink(
-            target: self,
-            selector: #selector(CountDownTimer.display)
-        )
-
-        state = .started(displayLink, self.now())
-
-        displayLink.add(to: RunLoop.main, forMode: .default)
-
         playStart()
     }
 
     func stop() {
-        if !self.state.started {
-            return
-        }
-
-        application.isIdleTimerDisabled = false
-
-        if case .started(let displayLink, _) = state {
-            displayLink.invalidate()
-            state = .stopped
-        } else {
-            fatalError("Stopping already stopped count down")
-        }
+        mTimer.stop()
+        idleTimer.enable()
     }
 
-    @objc func display(sender: Any) {
-        if case .started(_, let startTimeInterval) = state {
-            var elapsedTime = downTimeInterval - (self.now() - startTimeInterval)
-            elapsedTime = max(elapsedTime, 0.0)
+    @objc func display() {
+        let left = mTimer.timeLeft(now: self.now())
+        timeInterval = max(0.0, left)
 
-            timeInterval = elapsedTime
-
-            if elapsedTime <= 0.0 {
-                stop()
-                playStop()
-            }
-        } else {
-            fatalError("Expecting .started state for display")
+        if left <= 0.0 {
+            stop()
+            playStop()
         }
     }
 
@@ -123,7 +146,7 @@ class CountDownTimer{
     }
 
     func toggle() {
-        if state.started {
+        if mTimer.started {
             stop()
         } else {
             start()
@@ -149,6 +172,11 @@ class CountDownTimer{
 
 class ViewModel: ObservableObject {
     @Published var timeInterval: String = "30.0"
+    @Published var vibration: Bool = false {
+        didSet {
+            Sounds.settings.vibrate = vibration
+        }
+    }
 
     private var timer: CountDownTimer!
 
