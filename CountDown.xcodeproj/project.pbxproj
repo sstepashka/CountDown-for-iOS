@@ -13,7 +13,6 @@
 		582FADCE1E4F92E8008DADF2 /* CountDownTimeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582FADCD1E4F92E8008DADF2 /* CountDownTimeLabel.swift */; };
 		582FADD11E4F9BA4008DADF2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 582FADD01E4F9BA4008DADF2 /* AudioToolbox.framework */; };
 		582FADD31E4FA813008DADF2 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582FADD21E4FA813008DADF2 /* BackgroundView.swift */; };
-		582FADD51E4FC8C5008DADF2 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582FADD41E4FC8C5008DADF2 /* TimeIntervalExtensions.swift */; };
 		5857FBA91E51AC160093565B /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5857FBA71E51AC160093565B /* Sounds.swift */; };
 		589DB7BF1E4FF06C00418B4F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 589DB7C11E4FF06C00418B4F /* InfoPlist.strings */; };
 		FFBB859F29D14ACB00FA82FB /* CoundDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBB859E29D14ACB00FA82FB /* CoundDown.swift */; };
@@ -56,7 +55,6 @@
 		582FADCD1E4F92E8008DADF2 /* CountDownTimeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountDownTimeLabel.swift; sourceTree = "<group>"; };
 		582FADD01E4F9BA4008DADF2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		582FADD21E4FA813008DADF2 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
-		582FADD41E4FC8C5008DADF2 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		5857FBA71E51AC160093565B /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		589DB7C01E4FF06C00418B4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		589DB7C21E4FF0E200418B4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 				582FADB91E4F888D008DADF2 /* Info.plist */,
 				582FADCD1E4F92E8008DADF2 /* CountDownTimeLabel.swift */,
 				582FADD21E4FA813008DADF2 /* BackgroundView.swift */,
-				582FADD41E4FC8C5008DADF2 /* TimeIntervalExtensions.swift */,
 				589DB7C11E4FF06C00418B4F /* InfoPlist.strings */,
 				FFBB859E29D14ACB00FA82FB /* CoundDown.swift */,
 				FFBB85A029D14BFC00FA82FB /* ContentView.swift */,
@@ -260,7 +257,6 @@
 			files = (
 				FFBB85A129D14BFC00FA82FB /* ContentView.swift in Sources */,
 				582FADCE1E4F92E8008DADF2 /* CountDownTimeLabel.swift in Sources */,
-				582FADD51E4FC8C5008DADF2 /* TimeIntervalExtensions.swift in Sources */,
 				FFE5706129E50E0700B3AB59 /* CountDownTimer.swift in Sources */,
 				FFBB859F29D14ACB00FA82FB /* CoundDown.swift in Sources */,
 				582FADD31E4FA813008DADF2 /* BackgroundView.swift in Sources */,

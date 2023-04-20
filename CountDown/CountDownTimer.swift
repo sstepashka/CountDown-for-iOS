@@ -12,6 +12,22 @@ import Combine
 import AudioToolbox
 import UIKit
 
+extension TimeInterval {
+    var seconds: Int {
+        return Int(floor(self))
+    }
+
+    var fraction: Int {
+        return Int(floor((self - floor(self)) * 100))
+    }
+}
+
+extension TimeInterval {
+    var countDownString: String {
+        return String(format: "%02d:%02d", self.seconds, self.fraction)
+    }
+}
+
 struct MyTimer {
     private let duration: TimeInterval
     private var startTime: TimeInterval?
