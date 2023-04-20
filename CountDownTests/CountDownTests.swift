@@ -12,9 +12,7 @@ import XCTest
 import Foundation
 
 class CountDownTests: XCTestCase {
-    func testCreateMyTimer() {
-        let _ = MyTimer()
-    }
+    private var timer = MyTimer(duration: 30.0)!
 
     func testCreateMyTimerWithCustomDuration() {
         let _ = MyTimer(duration: 25.0)
@@ -36,22 +34,17 @@ class CountDownTests: XCTestCase {
     }
 
     func testTimeLeftReturns20When10SecondsPass() {
-        var timer = MyTimer(duration: 30.0)!
         timer.start(now: 5837.0)
         XCTAssertEqual(timer.timeLeft(now: 5837.0), 30.0)
     }
 
     func testLeftTimeAfterUpdate() {
-        var timer = MyTimer(duration: 30.0)!
-
         timer.start(now: 5837.0)
 
         XCTAssertEqual(timer.timeLeft(now: 5848.0), 19.0, accuracy: 0.01)
     }
 
     func testLeftTimeResetToDurationWhenTimerIsStopped() {
-        var timer = MyTimer(duration: 30.0)!
-
         timer.start(now: 5837.0)
 
         XCTAssertEqual(timer.timeLeft(now: 5848.0), 19.0, accuracy: 0.01)
@@ -62,26 +55,21 @@ class CountDownTests: XCTestCase {
     }
 
     func testStartedIsFalseBeforeStart() {
-        let timer = MyTimer(duration: 30.0)!
         XCTAssertFalse(timer.started)
     }
 
     func testStartedIsFalseAfterStop() {
-        var timer = MyTimer(duration: 30.0)!
         timer.start(now: 1234.0)
         timer.stop()
         XCTAssertFalse(timer.started)
     }
 
     func testStartedIsTrueAfterStart() {
-        var timer = MyTimer(duration: 30.0)!
         timer.start(now: 2423.0)
         XCTAssertTrue(timer.started)
     }
 
     func testLeftTimeWhenNotStartedEqualsToDuration() {
-        let timer = MyTimer(duration: 30.0)!
-
         XCTAssertEqual(timer.timeLeft(now: 6453.0), 30.0, accuracy: 0.01)
     }
 
