@@ -121,7 +121,7 @@ class CountDownTimer {
 
     let downTimeInterval = 5.0
     private var vibrate = Sounds.settings.vibrate
-    private let systemSoundID: SystemSoundID = 1022 //1104
+    private let systemSoundID: SystemSoundID = 1022 // 1104
     private let idleTimer = IdleTimer()
 
     private var frameUpdater = FrameUpdater()

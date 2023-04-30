@@ -24,7 +24,7 @@ struct BackgroundView: View {
                             Color(
                                 red: 184.0 / 255.0,
                                 green: 40.0 / 255.0,
-                                blue: 240.0 / 255.0),
+                                blue: 240.0 / 255.0)
                         ]),
                         startPoint: UnitPoint(x: 0.0, y: 0.0),
                         endPoint: UnitPoint(x: 0.0, y: 1.0)))

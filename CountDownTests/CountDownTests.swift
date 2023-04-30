@@ -15,7 +15,7 @@ class CountDownTests: XCTestCase {
     private var timer = MyTimer(duration: 30.0)!
 
     func testCreateMyTimerWithCustomDuration() {
-        let _ = MyTimer(duration: 25.0)
+        _ = MyTimer(duration: 25.0)
     }
 
     func testFailToCreateMyTimeWithNegativeDuration() {
